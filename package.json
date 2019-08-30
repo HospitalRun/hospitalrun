@@ -1,0 +1,12 @@
+{
+  "name": "hospitalrun",
+  "version": "0.0.1",
+  "description": "HosptialRun mono-repo",
+  "repository": "git@github.com:HospitalRun/hospitalrun.git",
+  "author": "Maksim Sink <maksim@sinik.it>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
