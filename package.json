@@ -6,6 +6,9 @@
   "author": "Maksim Sink <maksim@sinik.it>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "version": "lerna exec yarn version"
+  },
   "workspaces": [
     "packages/*"
   ],
