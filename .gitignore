@@ -1,3 +1,4 @@
+.DS_Store
 # TODO: Remove when ready
 package-lock.json
 pnpm-lock.yaml
@@ -5,6 +6,7 @@ yarn.lock
 
 build
 .idea
+.vscode
 *.iml
 # Logs
 logs
@@ -64,6 +66,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# next.js build output
-.next
