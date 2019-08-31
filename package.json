@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "build:components": "lerna exec --scope @hospitalrun-org/components yarn build",
     "version": "lerna exec yarn version"
   },
   "workspaces": [
