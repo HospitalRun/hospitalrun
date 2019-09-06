@@ -23,8 +23,6 @@ Fast, disk space efficient package manager
 Fast, reliable, and secure dependency management.
 `npm i -g yarn`
 
-## Useful commands
-
 
 <hr />
 
