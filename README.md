@@ -8,6 +8,9 @@
 
 All **HospitalRun** code lives in a single repository, an architecture generally called a monorepo. This repository holds all of HospitalRun's open source projects that lived in their own separate Github repos: [frontend](https://github.com/HospitalRun/hospitalrun-frontend), [server](https://github.com/HospitalRun/hospitalrun-server) and [components](https://github.com/HospitalRun/components).
 
+## How to use it
+
+
 ## Toolchain & CLI
 
 We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node.
@@ -21,11 +24,6 @@ Fast, reliable, and secure dependency management.
 `npm i -g yarn`
 
 ## Useful commands
-
-
-`pnpm recursive install -D`
-
-`pnpm i -r`
 
 
 <hr />
