@@ -7,13 +7,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build:components": "lerna exec --scope @hospitalrun-org/components yarn build",
-    "version": "lerna exec yarn version"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
-  "devDependencies": {
-    "lerna": "^3.16.4"
+    "preinstall": "node -e '!process.env.npm_config_user_agent.startsWith(\"pnpm/\")&&!console.log(\"   ⚠️   This is a mono-repo. Use `npx pnpm recursive install` to install dependencies in this repository ⚠️   \\n\")&&process.exit(1)'"
   }
 }
