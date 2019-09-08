@@ -22,7 +22,18 @@ Fast, disk space efficient package manager
 #### yarn
 Fast, reliable, and secure dependency management.
 `npm i -g yarn`
+## Getting Started
 
+```
+git clone https://github.com/HospitalRun/hospitalrun.git
+cd hospitalrun
+git submodule update --init --recursive
+pnpm install -r
+```
+
+## Commiting
+This repo uses conventional commits. Commitizen is recommended for development. Once you have changes staged
+you can run `git cz` from the root directory in order to commit to the proper standards
 
 <hr />
 
