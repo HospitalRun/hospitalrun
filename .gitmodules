@@ -12,3 +12,7 @@
 	path = packages/frontend
 	url = git@github.com:HospitalRun/hospitalrun-frontend.git
 	branch = next
+[submodule "packages/core"]
+	path = packages/core
+	url = git@github.com:HospitalRun/hospitalrun-core.git
+	branch = next
