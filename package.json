@@ -1,9 +1,19 @@
 {
   "name": "hospitalrun",
   "version": "0.0.1",
-  "description": "HosptialRun mono-repo",
-  "repository": "git@github.com:HospitalRun/hospitalrun.git",
-  "author": "Maksim Sink <maksim@sinik.it>",
+  "description": "HosptialRun monorepo",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:HospitalRun/hospitalrun.git"
+  },
+  "author": "Maksim Sinik",
+  "contributors": [
+    "Michael J Feher",
+    "Stefano Casasola",
+    "Jack Meyer",
+    "Riccardo Gulin",
+    "Matteo Vivona"
+  ],
   "license": "MIT",
   "private": true,
   "devDependencies": {

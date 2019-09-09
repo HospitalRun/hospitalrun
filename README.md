@@ -2,7 +2,8 @@
   
 <img src="https://raw.githubusercontent.com/HospitalRun/design/master/logo/logo-on-transparent.png" alt="HospitalRun logo"/>
 
-![Last commit](https://img.shields.io/github/last-commit/hospitalrun/hospitalrun) [![Activity](https://img.shields.io/github/commit-activity/m/hospitalrun/hospitalrun)](https://github.com/hospitalrun/hospitalrun/pulse) ![Repo size](https://img.shields.io/github/repo-size/hospitalrun/hospitalrun) [![Slack](https://hospitalrun-slackin.herokuapp.com/badge.svg)](https://hospitalrun-slackin.herokuapp.com) [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/hospitalrun) [![MIT](https://badgen.net/github/license/HospitalRun/hospitalrun)](https://github.com/HospitalRun/hospitalrun/blob/master/LICENSE)
+![Last commit](https://img.shields.io/github/last-commit/hospitalrun/hospitalrun) [![Activity](https://img.shields.io/github/commit-activity/m/hospitalrun/hospitalrun)](https://github.com/hospitalrun/hospitalrun/pulse) ![Repo size](https://img.shields.io/github/repo-size/hospitalrun/hospitalrun) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Slack](https://hospitalrun-slackin.herokuapp.com/badge.svg)](https://hospitalrun-slackin.herokuapp.com) [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/hospitalrun) [![MIT](https://badgen.net/github/license/HospitalRun/hospitalrun)](https://github.com/HospitalRun/hospitalrun/blob/master/LICENSE)
 
 </div>
 
@@ -10,34 +11,43 @@ All **HospitalRun** code lives in a single repository, an architecture generally
 
 ## How to use it
 
-
 ## Toolchain & CLI
 
 We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node.
 
 #### pnpm
+
 Fast, disk space efficient package manager
 `npm i -g pnpm`
 
 #### yarn
+
 Fast, reliable, and secure dependency management.
 `npm i -g yarn`
+
 ## Getting Started
 
 ```
+# Clone monorepo
 git clone git@github.com:HospitalRun/hospitalrun.git
+cd hospitalrun
+
+# Inizialize submodules and install dependencies
 git submodule update --init --recursive
 npx pnpm install -r --filter @hospitalrun-org/cli
 npx pnpm install -r
-# Do some coding then commit with
-npx git-cz
+
 # Test the cli
 npx hospitalrun --version
 ```
 
 ## Commiting
-This repo uses conventional commits. Commitizen is recommended for development. Once you have changes staged
-you can run `git cz` from the root directory in order to commit to the proper standards
+
+This repo uses [Conventional Commits](https://www.conventionalcommits.org/). [Commitizen](https://github.com/commitizen/cz-cli) is recommended for development. Once you have changes staged
+you can run `git cz` from the root directory in order to commit to the proper standards.
+
+Alternatively, if you are using NPM 5.2+ you can use [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) instead of installing globally:
+`npx git-cz`
 
 <hr />
 
