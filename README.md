@@ -25,10 +25,14 @@ Fast, reliable, and secure dependency management.
 ## Getting Started
 
 ```
-git clone https://github.com/HospitalRun/hospitalrun.git
-cd hospitalrun
+git clone git@github.com:HospitalRun/hospitalrun.git
 git submodule update --init --recursive
-pnpm install -r
+npx pnpm install -r --filter @hospitalrun-org/cli
+npx pnpm install -r
+# Do some coding then commit with
+npx git-cz
+# Test the cli
+npx hospitalrun --version
 ```
 
 ## Commiting
