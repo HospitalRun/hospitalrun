@@ -1,3 +1,4 @@
+swagger-codegen-cli*
 .DS_Store
 # TODO: Remove when ready
 package-lock.json
