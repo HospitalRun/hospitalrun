@@ -1,0 +1,14 @@
+/users:
+  get:
+    tags:
+      - Users
+    operationId: findUsers
+    summary: Finds a User
+    description: Search for a User in the Database
+    responses:
+      "200":
+        description: Returns a list of Users
+        schema:
+          type: array
+          items:
+            $ref: "#/definitions/User"

@@ -1,0 +1,6 @@
+user_id:
+  in: path
+  name: user_id
+  type: string
+  required: true
+  description: ID of the User to get

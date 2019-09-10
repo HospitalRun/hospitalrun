@@ -1,0 +1,48 @@
+swagger: '2.0'
+info:
+  version: 2.0.0
+  title: HospitalRun
+  description: +HospitalRun API
+  license:
+    name: MIT
+host: app.hospitalrun.io
+basePath: "/next"
+securityDefinitions:
+  couchBasicAuth:
+    type: basic
+  couchCookieAuth:
+    type: apiKey
+    name: Cookie
+    in: header
+  couchProxyAuth:
+    type: apiKey
+    name: X-Auth-CouchDB-Token
+    in: header
+  couchProxyAuthRoles:
+    type: apiKey
+    name: X-Auth-CouchDB-Roles
+    in: header
+  couchProxyAuthUsername:
+    type: apiKey
+    name: X-Auth-CouchDB-UserName
+    in: header
+
+security:
+  - couchBasicAuth: []
+  - couchCookieAuth: []
+  - couchProxyAuth: []
+  - couchProxyAuthRoles: []
+  - couchProxyAuthUsername: []
+
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+parameters:
+  $ref#UsersParameters: "./users/parameters.yml"
+paths:
+  $ref#UsersMethods: "./users/methods.yml"
+definitions:
+  $ref#UsersModels: "./users/models.yml"
