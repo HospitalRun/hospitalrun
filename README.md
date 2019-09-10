@@ -35,6 +35,15 @@ npx git-cz
 npx hospitalrun --version
 ```
 
+# Updating the mono repo
+After you are setup you can run
+```
+git submodule update --remote
+git add ./packages
+npx git-cz
+```
+
+
 ## Commiting
 This repo uses conventional commits. Commitizen is recommended for development. Once you have changes staged
 you can run `git cz` from the root directory in order to commit to the proper standards
