@@ -5,5 +5,7 @@ User:
       type: string
     last_name:
       type: string
-    username:
+    id:
       type: string
+  required:
+    - id

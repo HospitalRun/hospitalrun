@@ -1,14 +1,28 @@
-/users:
+/user:
   get:
     tags:
-      - Users
-    operationId: findUsers
+      - User
+    operationId: findUser
     summary: Finds a User
     description: Search for a User in the Database
     responses:
       "200":
-        description: Returns a list of Users
+        description: Returns a User
         schema:
-          type: array
-          items:
-            $ref: "#/definitions/User"
+          $ref: "#/definitions/User"
+/user/{id}:
+  get:
+    security:
+      - couchBasicAuth: []
+    tags:
+      - User
+    operationId: findUserById
+    summary: Finds a User
+    parameters:
+      - $ref: '#/parameters/id'
+    description: Search for a User in the Database
+    responses:
+      "200":
+        description: Returns a User
+        schema:
+          $ref: "#/definitions/User"

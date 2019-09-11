@@ -1,5 +1,12 @@
-//TODO: const {{camelCase operation_name}} = require('../services/{{operation_name}}');
-module.exports = function (fastify, opts, next) {
+import { Server, IncomingMessage, ServerResponse } from 'http'
+import { FastifyInstance } from 'fastify'
+import { nextCallback } from 'fastify-plugin'
+
+export default(
+    fastify: FastifyInstance<Server, IncomingMessage, ServerResponse>,
+    opts: {},
+    next: nextCallback,
+) => {
 {{#each headOperation}}
   {{#each this.path}}
     {{#validMethod @key}}
@@ -8,34 +15,34 @@ module.exports = function (fastify, opts, next) {
      * {{{this}}}
      {{/each}}
      */
-    fastify.{{@key}}('{{../../subresource}}', async (req, res, next) => {
+    fastify.{{@key}}('{{../../subresource}}', async (request, reply) => {
       const options = {
       {{#if ../requestBody}}
-      body: req.body{{#compare (lookup ../parameters 'length') 0 operator = '>' }},{{/compare}}
+      body: request.body{{#compare (lookup ../parameters 'length') 0 operator = '>' }},{{/compare}}
       {{/if}}
         {{#each ../parameters}}
           {{#equal this.in "query"}}
-            {{{quote ../name}}}: req.query['{{../name}}']{{#unless @last}},{{/unless}}
+            {{{quote ../name}}}: request.query['{{../name}}']{{#unless @last}},{{/unless}}
           {{/equal}}
           {{#equal this.in "path"}}
-            {{{quote ../name}}}: req.params['{{../name}}']{{#unless @last}},{{/unless}}
+            {{{quote ../name}}}: request.params['{{../name}}']{{#unless @last}},{{/unless}}
           {{/equal}}
           {{#equal this.in "header"}}
-            {{{quote ../name}}}: req.header['{{../name}}']{{#unless @last}},{{/unless}}
+            {{{quote ../name}}}: request.header['{{../name}}']{{#unless @last}},{{/unless}}
           {{/equal}}
         {{/each}}
         };
-
+        console.log(options)
         try {
-          const result = await fastify.{{camelCase ../../../operation_name}}.{{../operationId}}(options);
+          const result = await fastify.{{../operationId}}();
           {{#ifNoSuccessResponses ../responses}}
-            res.header('X-Result', result.data).status(200).send();
+            reply.header('X-Result', result.data).code(200).send();
           {{else}}
-            res.status(result.status || 200).send(result.data);
+            reply.code(result.code || 200).send(result);
           {{/ifNoSuccessResponses}}
           } catch (err) {
           {{#ifNoErrorResponses ../responses}}
-            return res.status(500).send({
+            reply.code(500).send({
               status: 500,
               error: 'Server Error'
             });
@@ -56,39 +63,39 @@ module.exports = function (fastify, opts, next) {
      * {{{this}}}
      {{/each}}
      */
-    fastify.{{@key}}('{{../../subresource}}', async (req, res, next) => {
+    fastify.{{@key}}('{{../../subresource}}', async (request, reply) => {
       const options = {
         {{#if ../requestBody}}
-        body: req.body{{#compare (lookup ../parameters 'length') 0 operator = '>' }},{{/compare}}
+        body: request.body{{#compare (lookup ../parameters 'length') 0 operator = '>' }},{{/compare}}
         {{/if}}
         {{#each ../parameters}}
           {{#equal this.in "query"}}
-        {{{quote ../name}}}: req.query['{{../name}}']{{#unless @last}},{{/unless}}
+        {{{quote ../name}}}: request.query['{{../name}}']{{#unless @last}},{{/unless}}
           {{/equal}}
           {{#equal this.in "path"}}
-        {{{quote ../name}}}: req.params['{{../name}}']{{#unless @last}},{{/unless}}
+        {{{quote ../name}}}: request.params['{{../name}}']{{#unless @last}},{{/unless}}
           {{/equal}}
           {{#equal this.in "header"}}
-        {{{quote ../name}}}: req.header['{{../name}}']{{#unless @last}},{{/unless}}
+        {{{quote ../name}}}: request.header['{{../name}}']{{#unless @last}},{{/unless}}
           {{/equal}}
           {{#match @../key "(post|put)"}}
             {{#equal ../in "body"}}
-        {{{quote ../name}}}: req.body['{{../name}}']{{#unless @last}},{{/unless}}
+        {{{quote ../name}}}: request.body['{{../name}}']{{#unless @last}},{{/unless}}
             {{/equal}}
           {{/match}}
         {{/each}}
       };
-
+      console.log(options)
       try {
-        const result = await fastify.{{camelCase ../../../operation_name}}.{{../operationId}}(options);
+        const result = await fastify.{{../operationId}}();
         {{#ifNoSuccessResponses ../responses}}
-        res.status(200).send(result.data);
+        reply.code(200).send(result);
         {{else}}
-        res.status(result.status || 200).send(result.data);
+        reply.code(200).send(result);
         {{/ifNoSuccessResponses}}
       } catch (err) {
         {{#ifNoErrorResponses ../responses}}
-        return res.status(500).send({
+        reply.code(500).send({
           status: 500,
           error: 'Server Error'
         });
@@ -97,8 +104,8 @@ module.exports = function (fastify, opts, next) {
         {{/ifNoErrorResponses}}
       }
     });
-next()
     {{/validMethod}}
   {{/each}}
 {{/each}}
+    next()
 }

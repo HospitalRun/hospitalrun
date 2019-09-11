@@ -6,13 +6,26 @@
   "author": "Maksim Sink <maksim@sinik.it>",
   "license": "MIT",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/cz-emoji",
+      "**/cz-emoji/**",
+      "**/husky",
+      "**/husky/**"
+    ]
+  },
   "scripts": {
     "test": "exit 0",
     "clean": "rimraf packages/*/node_modules packages/*/dist packages/*/build node_modules",
-    "download": "wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.4.8/swagger-codegen-cli-2.4.8.jar -d ./bin/",
-    "build:core": "npm run download && npm run build:swagger && java -Dmodels -jar ./bin/swagger-codegen-cli-2.4.8.jar generate -i ./build/swagger.yml -l typescript-inversify -o ./packages/core",
+    "download": "mkdirp bin && wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.4.8/swagger-codegen-cli-2.4.8.jar -d ./bin/",
+    "build:core": "npm run build:core-services && npm run build:core-models",
     "build:swagger": "mkdirp ./build && swagger-merger -i ./spec/next/index.yml -o ./build/swagger.yml",
-    "build:fastify": "npm run build:swagger && snc -t ./templates/fastify -o ./packages/server ./build/swagger.yml"
+    "build:fastify": "npm run build:swagger && snc -t ./templates/fastify -o ./packages/server/src ./build/swagger.yml",
+    "build:core-services": "rimraf ./packages/core/src/index.ts && npm run build:swagger && snc -t ./templates/inversify -o ./packages/core/src ./build/swagger.yml",
+    "build:core-models": "npm run download && npm run build:swagger && java -Dmodels -jar ./bin/swagger-codegen-cli-2.4.8.jar generate -i ./build/swagger.yml -l typescript-inversify -o ./packages/core/src"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
@@ -26,6 +39,7 @@
     "cz-emoji": "^1.1.2",
     "dateformat": "^3.0.3",
     "husky": "^3.0.5",
+    "jest": "24.8.0",
     "mkdirp": "^0.5.1",
     "node-wget": "^0.4.3",
     "pnpm": "^3.8.1",

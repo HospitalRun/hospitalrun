@@ -1,0 +1,6 @@
+id:
+  in: path
+  name: id
+  type: string
+  required: true
+  description: ID of an Document to Get
