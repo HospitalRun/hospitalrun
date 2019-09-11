@@ -1,0 +1,47 @@
+version: '3.7'
+services:
+  dev-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  hospitalrun-frontend:
+    build:
+      context: ./packages/frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - hospitalrun-db
+    volumes:
+      - ./packages/frontend:/home/node/app
+      - /home/node/app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - NODE_ENV=production
+      - VIRTUAL_HOST=hospitalrun-frontend
+  hospitalrun-server:
+    build:
+      context: ./packages/server
+    command: yarn dev
+    ports:
+      - "4000:3000"
+    depends_on:
+      - hospitalrun-db
+    volumes:
+      - ./packages/server:/home/node/app
+      - /home/node/app/node_modules
+    environment:
+      - NODE_ENV=production
+      - VIRTUAL_HOST=hospitalrun-server
+  hospitalrun-db:
+    image: couchdb:latest
+    ports:
+     - "5984:5984"
+    environment:
+      - VIRTUAL_HOST=hospitalrun-db
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:5984/"]
+        interval: 10s
+        timeout: 90s
+        retries: 9
