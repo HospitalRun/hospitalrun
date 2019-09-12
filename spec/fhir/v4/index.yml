@@ -1,0 +1,90 @@
+openapi: 3.0.0
+info:
+  title: HospitalRun
+  description: +HospitalRun API
+  contact: {}
+  version: '2.0.0'
+servers:
+- url: https://fhir.hospitalrun.io/v4
+  variables: {}
+paths:
+  /{type}/{id}:
+    get:
+      tags:
+      - FHIR
+      summary: get
+      description: Get a Document from the Database
+      operationId: Get
+      parameters:
+      - name: type
+        in: path
+        description: Type of Resouce to Get
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: id
+        in: path
+        description: ID of an Document to Get
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        200:
+          description: Returns a Document
+          headers: {}
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+        404:
+          description: Not Found Error
+      deprecated: false
+components:
+  schemas:
+    Document:
+      type: object
+      additionalProperties:
+        oneOf:
+          - $ref: '#/components/schemas/Condition'
+          - $ref: '#/components/schemas/Bundle'
+          - $ref: '#/components/schemas/DiagnosticReport'
+          - $ref: '#/components/schemas/Patient'
+          - $ref: '#/components/schemas/Practitioner'
+          - $ref: '#/components/schemas/AllergyIntolerance'
+          - $ref: '#/components/schemas/FamilyMemberHistory'
+          - $ref: '#/components/schemas/OperationOutcome'
+          - $ref: '#/components/schemas/Observation'
+          - $ref: '#/components/schemas/Encounter'
+          - $ref: '#/components/schemas/Person'
+          - $ref: '#/components/schemas/Location'
+    Condition:
+      type: object
+    Bundle:
+      type: object
+    DiagnosticReport:
+      type: object
+    Patient:
+      type: object
+    Practitioner:
+      type: object
+    AllergyIntolerance:
+      type: object
+    FamilyMemberHistory:
+      type: object
+    OperationOutcome:
+      type: object
+    Observation:
+      type: object
+    Encounter:
+      type: object
+    Person:
+      type: object
+    Location:
+      type: object
+tags:
+- name: FHIR
+  description: ''
