@@ -3,24 +3,25 @@ import { {{capitalize operation_name}} } from '../model/{{camelCase operation_na
 import Service, {DatabaseSync} from '../Service'
 export default class {{capitalize operation_name}}Service implements Service {
     dbs: DatabaseSync = {
-        cache: new PouchDB<PouchDB.Core.Document<{{capitalize operation_name}}>>('{{camelCase operation_name}}'),
+        // TODO: Move db config to constructor OR setup helper to tell if we are NodeJS/Browser and prefix filepath in Node
+        cache: new PouchDB<PouchDB.Core.Document<{{capitalize operation_name}}>>('./.data/{{camelCase operation_name}}'),
         remote: new PouchDB<PouchDB.Core.Document<{{capitalize operation_name}}>>('https://{{@root.swagger.host}}{{@root.swagger.basePath}}/{{camelCase operation_name}}'),
         master: new PouchDB<PouchDB.Core.Document<{{capitalize operation_name}}>>('https://{{@root.swagger.host}}{{@root.swagger.basePath}}/master')
     }
     constructor(sync: any){
       if(sync) {
-          this.dbs.cache.sync(this.dbs.remote, {
-            live: true,
-            retry: true
-          }).on('change', function (change: any) {
-            // yo, something changed!
-          }).on('paused', function (info: any) {
-            // replication was paused, usually because of a lost connection
-          }).on('active', function (info: any) {
-            // replication was resumed
-          }).on('error', function (err: any) {
-            // totally unhandled error (shouldn't happen)
-          });
+          //this.dbs.cache.sync(this.dbs.remote, {
+          // live: true,
+          //  retry: true
+          //}).on('change', function (change: any) {
+          //  // yo, something changed!
+          //}).on('paused', function (info: any) {
+          //  // replication was paused, usually because of a lost connection
+          //}).on('active', function (info: any) {
+          //  // replication was resumed
+          //}).on('error', function (err: any) {
+          //  // totally unhandled error (shouldn't happen)
+          //});
       }
     }
 {{#each headOperation}}
@@ -100,8 +101,8 @@ export default class {{capitalize operation_name}}Service implements Service {
             {{/equal}}
           {{/match}}
         {{/each}}
-    }){
-        return this.dbs.cache.{{@key}}('some passed in id')
+    }: {{capitalize ../../../operation_name}}){
+        return this.dbs.cache.{{@key}}(...arguments)
     }
         {{/validMethod}}
     {{/each}}

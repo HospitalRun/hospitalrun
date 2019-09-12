@@ -109,3 +109,4 @@ export default(
 {{/each}}
     next()
 }
+export const autoPrefix = '/{{operation_name}}'

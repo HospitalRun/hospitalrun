@@ -40,6 +40,11 @@ git add ./packages
 npx git-cz
 ```
 
+# Docker Develop Env
+```
+docker build -t hospitalrun-mono .
+docker-compose up
+```
 
 ## Commiting
 This repo uses conventional commits. Commitizen is recommended for development. Once you have changes staged

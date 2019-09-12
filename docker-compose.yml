@@ -7,30 +7,48 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
   hospitalrun-frontend:
-    build:
-      context: ./packages/frontend
+    image: hospitalrun-mono
+    command: yarn workspace @hospitalrun-org/frontend start
+    expose:
+      - 3000
     ports:
       - "3000:3000"
     depends_on:
       - hospitalrun-db
     volumes:
-      - ./packages/frontend:/home/node/app
+      - .:/home/node/app
       - /home/node/app/node_modules
+      - /home/node/app/packages/server/node_modules
+      - /home/node/app/packages/frontend/node_modules
+      - /home/node/app/packages/cli/node_modules
+      - /home/node/app/packages/core/node_modules
+      - /home/node/app/packages/components/node_modules
+      - /home/node/app/packages/docs/node_modules
     environment:
       - CHOKIDAR_USEPOLLING=true
       - NODE_ENV=production
       - VIRTUAL_HOST=hospitalrun-frontend
   hospitalrun-server:
-    build:
-      context: ./packages/server
-    command: yarn dev
+    image: hospitalrun-mono
+    command: yarn workspace @hospitalrun-org/server dev
+    expose:
+      - 3000
+      - 9229
+
     ports:
       - "4000:3000"
+      - "9229:9229"
     depends_on:
       - hospitalrun-db
     volumes:
-      - ./packages/server:/home/node/app
+      - .:/home/node/app
       - /home/node/app/node_modules
+      - /home/node/app/packages/server/node_modules
+      - /home/node/app/packages/frontend/node_modules
+      - /home/node/app/packages/cli/node_modules
+      - /home/node/app/packages/core/node_modules
+      - /home/node/app/packages/components/node_modules
+      - /home/node/app/packages/docs/node_modules
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=hospitalrun-server
