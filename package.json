@@ -40,7 +40,9 @@
       "**/cz-emoji",
       "**/cz-emoji/**",
       "**/husky",
-      "**/husky/**"
+      "**/husky/**",
+      "**/jest",
+      "**/jest/**"
     ]
   }
 }
