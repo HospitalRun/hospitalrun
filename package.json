@@ -31,5 +31,16 @@
     "commitizen": {
       "path": "./node_modules/cz-emoji"
     }
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/cz-emoji",
+      "**/cz-emoji/**",
+      "**/husky",
+      "**/husky/**"
+    ]
   }
 }
