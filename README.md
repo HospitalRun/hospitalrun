@@ -4,11 +4,18 @@
 
 ![Last commit](https://img.shields.io/github/last-commit/hospitalrun/hospitalrun) [![Activity](https://img.shields.io/github/commit-activity/m/hospitalrun/hospitalrun)](https://github.com/hospitalrun/hospitalrun/pulse) ![Repo size](https://img.shields.io/github/repo-size/hospitalrun/hospitalrun) [![Slack](https://hospitalrun-slackin.herokuapp.com/badge.svg)](https://hospitalrun-slackin.herokuapp.com) [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/hospitalrun) [![MIT](https://badgen.net/github/license/HospitalRun/hospitalrun)](https://github.com/HospitalRun/hospitalrun/blob/master/LICENSE)
 
+<hr />
 </div>
 
 All **HospitalRun** code lives in a single repository, an architecture generally called a monorepo. This repository holds all of HospitalRun's open source projects that lived in their own separate Github repos: [frontend](https://github.com/HospitalRun/hospitalrun-frontend), [server](https://github.com/HospitalRun/hospitalrun-server) and [components](https://github.com/HospitalRun/components).
 
-## How to use it
+## Table of Contents
+
+[Toolchain & CLI](##toolchain--cli)  
+[Getting Started](#getting-started)  
+[Updating the mono repo](#updating-the-mono-repo)  
+[Docker Develop Env](#docker-develop-env)  
+[Commiting](#commiting)
 
 ## Toolchain & CLI
 
@@ -27,13 +34,15 @@ git submodule update --init --recursive
 yarn
 yarn workspaces run build
 yarn upgrade
+
 # Do some coding then commit with
 npx git-cz
+
 # Test the cli
 npx hospitalrun --version
 ```
 
-# Updating the mono repo
+## Updating the mono repo
 
 After you are setup you can run
 
@@ -43,7 +52,7 @@ git add ./packages
 npx git-cz
 ```
 
-# Docker Develop Env
+## Docker Develop Env
 
 ```
 docker build -t hospitalrun-mono .
@@ -53,7 +62,38 @@ docker-compose up
 ## Commiting
 
 This repo uses conventional commits. Commitizen is recommended for development. Once you have changes staged
-you can run `git cz` from the root directory in order to commit to the proper standards
+you can run `git cz` from the root directory in order to commit to the proper standards.
+
+You must follow the following rules:
+
+1. Commit description must always start with a capital letter.
+2. Always use a scope. Here are some examples:
+
+**Generic**
+
+```
+setting
+ci
+deps
+readme
+devops
+system
+core
+testing
+cli
+release
+lifecycle
+```
+
+**Monorepo specific**
+
+```
+monorepo
+package
+release
+lifecycle
+workspace
+```
 
 <hr />
 
