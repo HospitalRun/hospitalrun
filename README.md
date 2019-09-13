@@ -10,25 +10,23 @@ All **HospitalRun** code lives in a single repository, an architecture generally
 
 ## How to use it
 
-
 ## Toolchain & CLI
 
 We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node.
 
-#### pnpm
-Fast, disk space efficient package manager
-`npm i -g pnpm`
-
 #### yarn
+
 Fast, reliable, and secure dependency management.
 `npm i -g yarn`
+
 ## Getting Started
 
 ```
 git clone git@github.com:HospitalRun/hospitalrun.git
 git submodule update --init --recursive
-npx pnpm install -r --filter @hospitalrun-org/cli
-npx pnpm install -r
+yarn
+yarn workspaces run build
+yarn upgrade
 # Do some coding then commit with
 npx git-cz
 # Test the cli
@@ -36,15 +34,24 @@ npx hospitalrun --version
 ```
 
 # Updating the mono repo
+
 After you are setup you can run
+
 ```
 git submodule update --remote
 git add ./packages
 npx git-cz
 ```
 
+# Docker Develop Env
+
+```
+docker build -t hospitalrun-mono .
+docker-compose up
+```
 
 ## Commiting
+
 This repo uses conventional commits. Commitizen is recommended for development. Once you have changes staged
 you can run `git cz` from the root directory in order to commit to the proper standards
 
