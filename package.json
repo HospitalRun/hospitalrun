@@ -9,7 +9,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/core": "^8.1.0",
-    "@hospitalrun/cli": "1.0.0",
+    "@hospitalrun-org/cli": "1.0.0",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/git": "^7.0.16",
     "@semantic-release/release-notes-generator": "^7.3.0",
