@@ -1,5 +1,5 @@
 <div align="center">
-  
+
 <img src="https://raw.githubusercontent.com/HospitalRun/design/master/logo/logo-on-transparent.png" alt="HospitalRun logo"/>
 
 ![Last commit](https://img.shields.io/github/last-commit/hospitalrun/hospitalrun) [![Activity](https://img.shields.io/github/commit-activity/m/hospitalrun/hospitalrun)](https://github.com/hospitalrun/hospitalrun/pulse) ![Repo size](https://img.shields.io/github/repo-size/hospitalrun/hospitalrun) [![Slack](https://hospitalrun-slackin.herokuapp.com/badge.svg)](https://hospitalrun-slackin.herokuapp.com) [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/hospitalrun) [![MIT](https://badgen.net/github/license/HospitalRun/hospitalrun)](https://github.com/HospitalRun/hospitalrun/blob/master/LICENSE)
@@ -11,10 +11,11 @@ All **HospitalRun** code lives in a single repository, an architecture generally
 
 ## Table of Contents
 
-[Toolchain & CLI](##toolchain--cli)  
-[Getting Started](#getting-started)  
-[Updating the mono repo](#updating-the-mono-repo)  
-[Docker Develop Env](#docker-develop-env)  
+[Toolchain & CLI](##toolchain--cli)
+[Getting Started](#getting-started)
+[Pull all submodules](#pull-all-submodules)
+[Updating the monorepo structure](#updating-the-mono-repo-structure)
+[Docker Develop Env](#docker-develop-env)
 [Commiting](#commiting)
 
 ## Toolchain & CLI
@@ -22,6 +23,8 @@ All **HospitalRun** code lives in a single repository, an architecture generally
 We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node, and [**yarn**](https://yarnpkg.com/lang/en/docs/install/#mac-stable) for a fast, reliable, and secure dependency management.
 
 ## Getting Started
+
+Use these commands to start using the monorepo.
 
 ```
 git clone git@github.com:HospitalRun/hospitalrun.git
@@ -38,9 +41,18 @@ npx git-cz
 npx hospitalrun --version
 ```
 
-## Updating the mono repo
+## Pull all submodules
 
-After you are setup you can run
+Use these commands to update all submodules and use the last available commit.
+
+```
+git submodule update --recursive --remote
+yarn upgrade
+```
+
+## Updating the monorepo structure
+
+Use these commands to add a new package after adding a submodule.
 
 ```
 git submodule update --remote
