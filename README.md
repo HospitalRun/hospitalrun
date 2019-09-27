@@ -31,7 +31,6 @@ git clone git@github.com:HospitalRun/hospitalrun.git
 cd hospitalrun
 git submodule update --init --recursive
 yarn
-yarn upgrade
 yarn workspaces run build
 
 # Do some coding then commit with
