@@ -5,7 +5,7 @@
 [submodule "packages/components"]
 	path = packages/components
 	url = git@github.com:HospitalRun/components.git
-[submodule "packages/hospitalrun-cli"]
+[submodule "packages/cli"]
 	path = packages/cli
 	url = git@github.com:HospitalRun/hospitalrun-cli.git
 	branch = next
