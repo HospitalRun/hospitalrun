@@ -19,21 +19,17 @@ All **HospitalRun** code lives in a single repository, an architecture generally
 
 ## Toolchain & CLI
 
-We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node.
-
-#### yarn
-
-Fast, reliable, and secure dependency management.
-`npm i -g yarn`
+We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node, and [**yarn**](https://yarnpkg.com/lang/en/docs/install/#mac-stable) for a fast, reliable, and secure dependency management.
 
 ## Getting Started
 
 ```
 git clone git@github.com:HospitalRun/hospitalrun.git
+cd hospitalrun
 git submodule update --init --recursive
 yarn
-yarn workspaces run build
 yarn upgrade
+yarn workspaces run build
 
 # Do some coding then commit with
 npx git-cz
@@ -49,13 +45,14 @@ After you are setup you can run
 ```
 git submodule update --remote
 git add ./packages
+yarn upgrade
 npx git-cz
 ```
 
-## Docker Develop Env
+## Docker Develop Env (WIP)
 
 ```
-docker build -t hospitalrun-mono .
+docker build -t hospitalrun .
 docker-compose up
 ```
 
