@@ -1,7 +1,6 @@
 [submodule "packages/server"]
 	path = packages/server
 	url = git@github.com:HospitalRun/hospitalrun-server.git
-	branch = next
 [submodule "packages/components"]
 	path = packages/components
 	url = git@github.com:HospitalRun/components.git
@@ -11,7 +10,6 @@
 [submodule "packages/frontend"]
 	path = packages/frontend
 	url = git@github.com:HospitalRun/hospitalrun-frontend.git
-	branch = next
 [submodule "packages/core"]
 	path = packages/core
 	url = git@github.com:HospitalRun/hospitalrun-core.git

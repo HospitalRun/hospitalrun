@@ -19,14 +19,13 @@
     "cz-emoji": "~1.1.2",
     "dateformat": "~3.0.3",
     "husky": "~3.0.5",
-    "pnpm": "~3.8.1",
     "semantic-release-gitmoji": "~1.3.2",
     "semantic-release-monorepo": "~6.1.1"
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "cross-env CI=true pnpm test -r"
+      "pre-commit": "cross-env CI=true yarn workspaces run test"
     }
   },
   "config": {
