@@ -8,7 +8,6 @@
 [submodule "packages/cli"]
 	path = packages/cli
 	url = git@github.com:HospitalRun/hospitalrun-cli.git
-	branch = next
 [submodule "packages/frontend"]
 	path = packages/frontend
 	url = git@github.com:HospitalRun/hospitalrun-frontend.git
@@ -16,8 +15,6 @@
 [submodule "packages/core"]
 	path = packages/core
 	url = git@github.com:HospitalRun/hospitalrun-core.git
-	branch = next
 [submodule "packages/docs"]
 	path = packages/docs
 	url = git@github.com:HospitalRun/hospitalrun-docs.git
-    branch = next
