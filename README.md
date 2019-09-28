@@ -57,7 +57,7 @@ This repo uses conventional commits. Commitizen is recommended for development. 
 you can run `git cz` from the root directory in order to commit to the proper standards.
 
 1. Staging all pending changes. Es: `git add .`
-2. Use the following command: `npx git-cz`
+2. Use the following command: `yarn commit`
 3. Updates remote refs using local refs. Es: `git push` 
 
 ### How to commit a specific package?
