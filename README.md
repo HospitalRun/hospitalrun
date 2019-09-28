@@ -10,17 +10,17 @@
 All **HospitalRun** code lives in a single repository, an architecture generally called a monorepo. This repository holds all of HospitalRun's open source projects that lived in their own separate Github repos: [frontend](https://github.com/HospitalRun/hospitalrun-frontend), [server](https://github.com/HospitalRun/hospitalrun-server) and [components](https://github.com/HospitalRun/components).
 
 ## Table of Contents
-
-[Toolchain & CLI](##toolchain--cli)
-[Getting Started](#getting-started)
-[Pull all submodules](#pull-all-submodules)
-[Updating the monorepo structure](#updating-the-mono-repo-structure)
-[Docker Develop Env](#docker-develop-env)
-[Commiting](#commiting)
+ * [Toolchain & CLI](#toolchain--cli)
+ * [Getting Started](#getting-started)
+ * [Pull all submodules](#pull-all-submodules)
+ * [Commiting](#commiting)
+   * [How to commit a specific package?](#how-to-commit-a-specific-package) 
+ * [Updating the monorepo structure](#updating-the-monorepo-structure)
+ * [Docker Develop Env](#docker-develop-env)    
 
 ## Toolchain & CLI
 
-We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node, and [**yarn**](https://yarnpkg.com/lang/en/docs/install/#mac-stable) for a fast, reliable, and secure dependency management.
+We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node, and [**yarn**](https://yarnpkg.com/lang/en/docs/install/#mac-stable) for a fast, reliable, and secure dependency management. We suggest to install [**yarn**] with `npm i -g yarn`.
 
 ## Getting Started
 
@@ -46,31 +46,30 @@ Use these commands to update all submodules and use the last available commit.
 
 ```
 git submodule update --recursive --remote
-yarn upgrade
-```
 
-## Updating the monorepo structure
-
-Use these commands to add a new package after adding a submodule.
-
-```
-git submodule update --remote
-git add ./packages
-yarn upgrade
-npx git-cz
-```
-
-## Docker Develop Env (WIP)
-
-```
-docker build -t hospitalrun .
-docker-compose up
+yarn upgrade // Update all dependencies automatically
+yarn update // This is similar to npm-check interactive update mode. It provides an easy way to update outdated packages. 
 ```
 
 ## Commiting
 
 This repo uses conventional commits. Commitizen is recommended for development. Once you have changes staged
 you can run `git cz` from the root directory in order to commit to the proper standards.
+
+1. Staging all pending changes. Es: `git add .`
+2. Use the following command: `npx git-cz`
+3. Updates remote refs using local refs. Es: `git push` 
+
+### How to commit a specific package?
+
+```
+yarn commit-frontend
+yarn commit-server
+yarn commit-components
+yarn commit-cli
+yarn commit-core
+yarn commit-docs
+```
 
 You must follow the following rules:
 
@@ -102,6 +101,28 @@ release
 lifecycle
 workspace
 ```
+
+## Updating the monorepo structure
+
+Use these commands to add a new package after adding a submodule.
+
+```
+git submodule update --remote
+git add ./packages
+yarn upgrade
+npx git-cz
+```
+
+## Docker Develop Env 
+
+**WIP**
+
+```
+docker build -t hospitalrun .
+docker-compose up
+```
+
+
 
 <hr />
 
