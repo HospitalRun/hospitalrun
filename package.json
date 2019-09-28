@@ -6,6 +6,16 @@
   "author": "Maksim Sink <maksim@sinik.it>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "commit": "npx git-cz",
+    "commit-cli": "yarn workspace @hospitalrun/cli commit",
+    "commit-components": "yarn workspace @hospitalrun/components commit",
+    "commit-core": "yarn workspace @hospitalrun/core commit",
+    "commit-docs": "yarn workspace @hospitalrun/docs commit",
+    "commit-frontend": "yarn workspace @hospitalrun/frontend commit",
+    "commit-server": "yarn workspace @hospitalrun/server commit",
+    "update": "yarn upgrade-interactive --latest"
+  },
   "devDependencies": {
     "@commitlint/cli": "~8.1.0",
     "@commitlint/core": "~8.1.0",
