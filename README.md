@@ -24,7 +24,7 @@ We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-
 
 ## Getting Started
 
-Use these commands to start using the monorepo.
+Use these commands to start using the monorepo. The following commands require that your GitHub account has [SSH access](https://help.github.com/en/articles/connecting-to-github-with-ssh) enabled.
 
 ```
 git clone git@github.com:HospitalRun/hospitalrun.git
