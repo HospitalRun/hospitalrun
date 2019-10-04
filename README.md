@@ -8,15 +8,17 @@
 </div>
 
 All **HospitalRun** code lives in a single repository, an architecture generally called a monorepo. This repository holds all of HospitalRun's open source projects that lived in their own separate Github repos: [frontend](https://github.com/HospitalRun/hospitalrun-frontend), [server](https://github.com/HospitalRun/hospitalrun-server) and [components](https://github.com/HospitalRun/components).
+Built with React, Node, PouchDB/CouchDB and using offline first design, we're working to deliver an HIS system that makes usability the #1 requirement, is built specifically for developing world requirements, and seeks to give back time to patient care.
 
 ## Table of Contents
- * [Toolchain & CLI](#toolchain--cli)
- * [Getting Started](#getting-started)
- * [Pull all submodules](#pull-all-submodules)
- * [Commiting](#commiting)
-   * [How to commit a specific package?](#how-to-commit-a-specific-package) 
- * [Updating the monorepo structure](#updating-the-monorepo-structure)
- * [Docker Develop Env](#docker-develop-env)    
+
+- [Toolchain & CLI](#toolchain--cli)
+- [Getting Started](#getting-started)
+- [Pull all submodules](#pull-all-submodules)
+- [Commiting](#commiting)
+  - [How to commit a specific package?](#how-to-commit-a-specific-package)
+- [Updating the monorepo structure](#updating-the-monorepo-structure)
+- [Docker Develop Env](#docker-develop-env)
 
 ## Toolchain & CLI
 
@@ -48,7 +50,7 @@ Use these commands to update all submodules and use the last available commit.
 git submodule update --recursive --remote
 
 yarn upgrade // Update all dependencies automatically
-yarn update // This is similar to npm-check interactive update mode. It provides an easy way to update outdated packages. 
+yarn update // This is similar to npm-check interactive update mode. It provides an easy way to update outdated packages.
 ```
 
 ## Commiting
@@ -58,7 +60,7 @@ you can run `git cz` from the root directory in order to commit to the proper st
 
 1. Staging all pending changes. Es: `git add .`
 2. Use the following command: `yarn commit`
-3. Updates remote refs using local refs. Es: `git push` 
+3. Updates remote refs using local refs. Es: `git push`
 
 ### How to commit a specific package?
 
@@ -113,7 +115,7 @@ yarn upgrade
 npx git-cz
 ```
 
-## Docker Develop Env 
+## Docker Develop Env
 
 **WIP**
 
@@ -121,8 +123,6 @@ npx git-cz
 docker build -t hospitalrun .
 docker-compose up
 ```
-
-
 
 <hr />
 
