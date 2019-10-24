@@ -37,9 +37,6 @@ yarn workspaces run build
 
 # Do some coding then commit with
 npx git-cz
-
-# Test the cli
-npx hospitalrun --version
 ```
 
 ## Pull all submodules
