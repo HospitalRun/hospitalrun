@@ -15,7 +15,23 @@
   ],
   "eslint.workingDirectories": [
     {
+      "directory": "packages/cli",
+      "changeProcessCWD": true
+    },
+    {
       "directory": "packages/components",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/core",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/docs",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "packages/frontend",
       "changeProcessCWD": true
     },
     {
