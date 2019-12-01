@@ -22,7 +22,7 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 | [CLI](https://github.com/HospitalRun/hospitalrun-cli)           | ![Status](https://img.shields.io/badge/Status-to%20do-inactive)      | N.D.                                                                                                                                         | N.D.                                                                                                                                                                                         |
 | [Docs](https://github.com/HospitalRun/hospitalrun-docs)         | ![Status](https://img.shields.io/badge/Status-to%20do-inactive)      | N.D.                                                                                                                                         | N.D.                                                                                                                                                                                         |
 
-<em>Last Update: 15 Nov 2019</em>
+<em>Last Update: 01 Dec 2019</em>
 
 ## Table of Contents
 
