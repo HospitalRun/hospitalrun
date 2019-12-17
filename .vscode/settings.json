@@ -15,10 +15,6 @@
   ],
   "eslint.workingDirectories": [
     {
-      "directory": "packages/cli",
-      "changeProcessCWD": true
-    },
-    {
       "directory": "packages/components",
       "changeProcessCWD": true
     },
@@ -38,5 +34,8 @@
       "directory": "packages/server",
       "changeProcessCWD": true
     }
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
