@@ -32,8 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "cross-env CI=true yarn workspaces run test"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "config": {
@@ -59,7 +58,11 @@
       "**/tap",
       "**/tap/**",
       "**/tap-mocha-reporter",
-      "**/tap-mocha-reporter/**"
+      "**/tap-mocha-reporter/**",
+      "**/eslint-plugin-prettier",
+      "**/eslint-plugin-prettier/**",
+      "**/eslint-config-prettier",
+      "**/eslint-config-prettier/**"
     ]
   }
 }
