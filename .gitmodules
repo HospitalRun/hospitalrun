@@ -10,6 +10,3 @@
 [submodule "packages/core"]
 	path = packages/core
 	url = git@github.com:HospitalRun/hospitalrun-core.git
-[submodule "packages/docs"]
-	path = packages/docs
-	url = git@github.com:HospitalRun/hospitalrun-docs.git

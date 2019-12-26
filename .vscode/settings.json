@@ -13,17 +13,12 @@
       "language": "typescriptreact"
     }
   ],
-  "eslint.workingDirectories": [
-    {
+  "eslint.workingDirectories": [{
       "directory": "packages/components",
       "changeProcessCWD": true
     },
     {
       "directory": "packages/core",
-      "changeProcessCWD": true
-    },
-    {
-      "directory": "packages/docs",
       "changeProcessCWD": true
     },
     {

@@ -10,7 +10,6 @@
     "commit": "npx git-cz",
     "commit-components": "yarn workspace @hospitalrun/components commit",
     "commit-core": "yarn workspace @hospitalrun/core commit",
-    "commit-docs": "yarn workspace @hospitalrun/docs commit",
     "commit-frontend": "yarn workspace @hospitalrun/frontend commit",
     "commit-server": "yarn workspace @hospitalrun/server commit",
     "update": "yarn upgrade-interactive --latest"
