@@ -13,7 +13,7 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 
 **Version 1.0.0-beta is no longer supported. Version 2 is currently under development.**
 
-- To contribute, follow the directions in the readme or otherwise ask for details in the slack channel [#contributors](https://hospitalrun-slack.herokuapp.com).
+- To contribute, follow the guidelines in the readme or otherwise ask for details in the slack channel [#contributors](https://hospitalrun-slack.herokuapp.com).
 - To use version 1.0.0-beta (not ready for production) in a hospital, ask for support on Slack channel [#troubleshooting](https://hospitalrun-slack.herokuapp.com) or Spectrum channel [#support](https://spectrum.chat/hospitalrun).
 
 ## Project Development Status
