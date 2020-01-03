@@ -18,7 +18,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
+      
+      - name: Clone submodules
+        run: |
+          git submodule update --init --recursive
       - name: Install with yarn
         run: |
           curl -o- -L https://yarnpkg.com/install.sh | bash
