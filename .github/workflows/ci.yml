@@ -13,29 +13,27 @@ jobs:
 
     steps:
       - uses: actions/checkout@master   
-      - name: disable the keychain credential helper
+      - name: Disable the keychain credential helper
         run: git config --global credential.helper ""
-      - name: enable the local store credential helper
+      - name: Enable the local store credential helper
         run: git config --global --add credential.helper store
-      - name: add credential
+      - name: Add credential
         run: echo "https://x-access-token:${{ secrets.BOT_TOKEN }}@github.com" >> ~/.git-credentials
-      - name: tell git to use https instead of ssh whenever it encounters it
+      - name: Tell git to use https instead of ssh whenever it encounters it
         run: 'git config --global url."https://github.com/".insteadof git@github.com:'
+    
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+              
       - name: Checkout submodules
         shell: bash
         run: |
           auth_header="$(git config --local --get http.https://github.com/.extraheader)"
           git submodule sync --recursive
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
-
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1  
       
-      - name: Clone submodules
-        run: |
-          git submodule update --init --recursive
       - name: Install with yarn
         run: |
           curl -o- -L https://yarnpkg.com/install.sh | bash
