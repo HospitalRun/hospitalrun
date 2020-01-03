@@ -38,12 +38,12 @@ jobs:
         run: |
           curl -o- -L https://yarnpkg.com/install.sh | bash
           yarn install
-      - name: Lint code
-        run: |
-          yarn workspaces run lint
       - name: Build
         run: |
           yarn workspaces run build
+      - name: Lint code
+        run: |
+          yarn workspaces run lint    
       - name: Run tests
         run: |
           npx cross-env CI=true yarn workspaces run test
