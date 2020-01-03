@@ -12,7 +12,10 @@ jobs:
         os: [ubuntu-18.04]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@master
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          submodules: true
 
       - name: Use Node.js
         uses: actions/setup-node@v1
