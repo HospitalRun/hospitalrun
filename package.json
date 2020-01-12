@@ -61,7 +61,9 @@
       "**/eslint-plugin-prettier",
       "**/eslint-plugin-prettier/**",
       "**/eslint-config-prettier",
-      "**/eslint-config-prettier/**"
+      "**/eslint-config-prettier/**",
+      "**/webpack",
+      "**/webpack/**"
     ]
   }
 }
