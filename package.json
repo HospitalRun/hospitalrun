@@ -12,6 +12,8 @@
     "commit-core": "yarn workspace @hospitalrun/core commit",
     "commit-frontend": "yarn workspace @hospitalrun/frontend commit",
     "commit-server": "yarn workspace @hospitalrun/server commit",
+    "release-frontend": "yarn workspace @hospitalrun/frontend semantic-release",
+    "release-server": "yarn workspace @hospitalrun/server semantic-release",
     "update": "yarn upgrade-interactive --latest"
   },
   "devDependencies": {
