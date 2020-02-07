@@ -58,6 +58,9 @@ yarn workspaces run build
 npx git-cz
 ```
 
+## Working on an Issue
+In order to optimize the workflow and to prevent multiple contributors working on the same issue without interactions, a contributor must ask to be assigned to an issue by one of the core team members: it's enough to ask it inside the specific issue.
+
 ## Pull all submodules
 
 Use these commands to update all submodules and use the last available commit.
