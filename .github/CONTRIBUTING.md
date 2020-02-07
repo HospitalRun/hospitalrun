@@ -39,7 +39,7 @@ Before submitting a request, please search for similar ones in the
 
 HospitalRun is a member of the [Open JS Foundation](https://openjsf.org/).
 As such, we request that all contributors sign our
-[contributor license agreement (CLA)](https://js.foundation/CLA/).
+[contributor license agreement (CLA)](https://openjsf.org/about/the-openjs-foundation-cla/).
 
 For more information about CLAs, please check out Alex Russell’s excellent post,
 [“Why Do I Need to Sign This?”](https://infrequently.org/2008/06/why-do-i-need-to-sign-this/).
