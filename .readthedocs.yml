@@ -8,5 +8,8 @@ version: 2
 # Build all formats
 formats: all
 
+mkdocs:
+  configuration: mkdocs.yml
+
 submodules:
   include: all
