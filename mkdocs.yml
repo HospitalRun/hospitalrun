@@ -9,8 +9,8 @@ nav:
   - Home: https://docs.hospitalrun.io
   - Users Guide: https://hospitalrun.io
   - Devs Guide:
-      - Frontend: https://docs.hospitalrun.io/projects/hospitalrun-frontend/en/latest/
-      - Server: https://docs.hospitalrun.io/projects/hospitalrun-server/en/latest/
+      - Frontend: https://hospitalrun-frontend.readthedocs.io
+      - Server: https://hospitalrun-server.readthedocs.io
   - About:
       - Project: https://hospitalrun.io
       - Contributing: https://github.com/HospitalRun/hospitalrun/blob/master/.github/CONTRIBUTING.md
