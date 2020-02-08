@@ -6,7 +6,7 @@ site_author: HospitalRun Core Team
 repo_url: https://github.com/hospitalrun/hospitalrun/
 
 nav:
-  - Home: index.md
+  - Home: https://docs.hospitalrun.io
   - Devs Guide:
       - Frontend: https://docs.hospitalrun.io/projects/hospitalrun-frontend/en/latest/
       - Server: https://docs.hospitalrun.io/projects/hospitalrun-server/en/latest/
@@ -17,6 +17,9 @@ nav:
 theme:
   name: readthedocs
   highlightjs: true
+
+extra_css:
+  - css/style.css
 
 plugins:
   - search
