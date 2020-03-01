@@ -25,11 +25,12 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 | [Server](https://github.com/HospitalRun/hospitalrun-server)     | ![Status](https://img.shields.io/badge/Status-developing-brightgree)                                                                                                                                                           | [![GitHub CI](https://github.com/HospitalRun/server/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/server/actions)         | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/hospitalrun-server/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/hospitalrun-server?branch=master)     | 
 | [Core](https://github.com/HospitalRun/hospitalrun-core)         | [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) | N.D.                                                                                                                                         | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/hospitalrun-core/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/hospitalrun-core?branch=master)         | 
 
-<em>Last Update: 7 Feb 2020</em>
+<em>Last Update: 1 Mar 2020</em>
 
 ## Table of Contents
 
-- [Toolchain & CLI](#toolchain--cli)
+- [Toolchain](#toolchain)
+- [Working on an Issue](#working-on-an-issue)
 - [Getting Started](#getting-started)
 - [Pull all submodules](#pull-all-submodules)
 - [Commiting](#commiting)
