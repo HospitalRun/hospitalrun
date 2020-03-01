@@ -36,9 +36,9 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
   - [How to commit a specific package?](#how-to-commit-a-specific-package)
 - [Updating the monorepo structure](#updating-the-monorepo-structure)
 
-## Toolchain & CLI
+## Toolchain
 
-We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node, and [**yarn**](https://yarnpkg.com/lang/en/docs/install/#mac-stable) for a fast, reliable, and secure dependency management. We suggest to install [**yarn**] with `npm i -g yarn`.
+We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node, and [**yarn**](https://yarnpkg.com/) for a fast, reliable, and secure dependency management. We suggest to install **yarn** with `npm i -g yarn`.
 
 ## Getting Started
 
