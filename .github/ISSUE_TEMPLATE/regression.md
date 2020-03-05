@@ -3,7 +3,7 @@ name: 💥 Regression Report
 about: Report unexpected behavior that worked in previous versions
 ---
 
-Before you submit an issue we recommend you drop into our [Spectrum channel](https://spectrum.chat/hospitalrun) and ask any questions you have or mention any problems you've had getting started with HospitalRun.
+Before you submit an issue we recommend you drop into our [Slack workspace](https://hospitalrun-slack.herokuapp.com/) and ask any questions you have or mention any problems you've had getting started with HospitalRun.
 
 **Please read this entire template before posting any issue. If you ignore these instructions
 and post an issue here that does not follow the instructions, your issue might be closed,
@@ -26,7 +26,6 @@ Steps to reproduce the behavior:
 Paste your code here:
 
 ```js
-
 ```
 
 ## Expected behavior
@@ -36,10 +35,9 @@ A clear and concise description of what you expected to happen.
 Paste the results here:
 
 ```js
-
 ```
 
 ## Your Environment
 
-- *os*: Mac, Windows, Linux
-- *any other relevant information*
+- _os_: Mac, Windows, Linux
+- _any other relevant information_
