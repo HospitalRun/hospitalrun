@@ -2,8 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/HospitalRun/design/master/logo/logo-on-transparent.png" alt="HospitalRun logo"/>
 
-![Last commit](https://img.shields.io/github/last-commit/hospitalrun/hospitalrun) [![GitHub CI](https://github.com/HospitalRun/hospitalrun/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/hospitalrun/actions) [![Documentation Status](https://readthedocs.org/projects/hospitalrun/badge/?version=latest)](https://docs.hospitalrun.io) [![Activity](https://img.shields.io/github/commit-activity/m/hospitalrun/hospitalrun)](https://github.com/hospitalrun/hospitalrun/pulse) ![Repo size](https://img.shields.io/github/repo-size/hospitalrun/hospitalrun) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/Landish/cz-gitmoji)
-[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/) [![Slack](https://hospitalrun-slack.herokuapp.com/badge.svg)](https://hospitalrun-slack.herokuapp.com)
+![Last commit](https://img.shields.io/github/last-commit/hospitalrun/hospitalrun) [![GitHub CI](https://github.com/HospitalRun/hospitalrun/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/hospitalrun/actions) [![Documentation Status](https://readthedocs.org/projects/hospitalrun/badge/?version=latest)](https://docs.hospitalrun.io) [![Activity](https://img.shields.io/github/commit-activity/m/hospitalrun/hospitalrun)](https://github.com/hospitalrun/hospitalrun/pulse) ![Repo size](https://img.shields.io/github/repo-size/hospitalrun/hospitalrun) ![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg) [![Slack](https://hospitalrun-slack.herokuapp.com/badge.svg)](https://hospitalrun-slack.herokuapp.com)
 
 <hr />
 </div>
@@ -73,7 +72,7 @@ yarn update // This is similar to npm-check interactive update mode. It provides
 
 ## Commiting
 
-This repo uses [conventional commits](https://github.com/Landish/cz-gitmoji), [semantic-release](https://github.com/momocow/semantic-release-gitmoji) and [gitmoji](https://gitmoji.carloscuesta.me). Once you have changes staged
+This repo uses [conventional commits](https://github.com/Landish/cz-gitmoji) and [semantic-release](https://github.com/momocow/semantic-release-gitmoji). Once you have changes staged
 you can run `git cz` from the root directory in order to commit to the proper standards.
 
 1. Staging all pending changes. Es: `git add .`
