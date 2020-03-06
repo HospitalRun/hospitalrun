@@ -9,6 +9,7 @@
   "scripts": {
     "commit": "npx git-cz",
     "commit-components": "yarn workspace @hospitalrun/components commit",
+    "commit-cli": "yarn workspace @hospitalrun/cli commit",
     "commit-core": "yarn workspace @hospitalrun/core commit",
     "commit-frontend": "yarn workspace @hospitalrun/frontend commit",
     "commit-server": "yarn workspace @hospitalrun/server commit",
