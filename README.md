@@ -36,6 +36,7 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 - [Commiting](#commiting)
   - [How to commit a specific package?](#how-to-commit-a-specific-package)
 - [Updating the monorepo structure](#updating-the-monorepo-structure)
+- [Application infrastructure](#application-infrastructure)
 
 ## Toolchain
 
@@ -132,6 +133,12 @@ git add ./packages
 yarn upgrade
 npx git-cz
 ```
+
+# Application infrastructure
+
+A visual representation of the functionality of all HospitalRun modules and their interactions.
+
+[<img width="1658" alt="miro" src="https://user-images.githubusercontent.com/6388707/78055877-7b50ed80-7384-11ea-9e65-602a0f8b9ec9.png">](https://miro.com/app/board/o9J_kv4RtwE=/)
 
 <hr />
 
