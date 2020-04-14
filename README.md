@@ -15,20 +15,28 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 - To contribute, follow the guidelines in the readme or alternatively ask for details on Slack channel [#contributors](https://hospitalrun-slack.herokuapp.com).
 - To use version 1.0.0-beta (not production ready) in a hospital facility, ask for support on Slack channel [#troubleshooting](https://hospitalrun-slack.herokuapp.com).
 
+<div align="center">
+
+[![Contributors](https://img.shields.io/badge/Hint-Are%20you%20a%20new%20contributor%3F-Green?style=for-the-badge&logo=github)](#contributing)
+
+</div>
+
 ## Project Development Status
 
-| Submodules| Progress status| Build status| Coverage status|
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Components](https://github.com/HospitalRun/components)| ![Status](https://img.shields.io/badge/Status-developing-brightgree)| [![GitHub CI](https://github.com/HospitalRun/components/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/components/actions) | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/components/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/components?branch=master)|
-| [Frontend](https://github.com/HospitalRun/hospitalrun-frontend) | ![Status](https://img.shields.io/badge/Status-developing-brightgree)| [![GitHub CI](https://github.com/HospitalRun/frontend/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/frontend/actions)| [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/hospitalrun-frontend/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/hospitalrun-frontend?branch=master) |
-| [Server](https://github.com/HospitalRun/hospitalrun-server)| ![Status](https://img.shields.io/badge/Status-developing-brightgree) | [![GitHub CI](https://github.com/HospitalRun/server/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/server/actions)| [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/hospitalrun-server/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/hospitalrun-server?branch=master)|
-| [Core](https://github.com/HospitalRun/hospitalrun-core) | ![Status](https://img.shields.io/badge/Status-developing-brightgree) | [![GitHub CI](https://github.com/HospitalRun/hospitalrun-core/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/hospitalrun-core/actions) | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/hospitalrun-core/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/hospitalrun-core?branch=master)|
-| [CLI](https://github.com/HospitalRun/cli)| ![Status](https://img.shields.io/badge/Status-developing-brightgree) | [![GitHub CI](https://github.com/HospitalRun/cli/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/cli/actions)| [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/cli/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/cli?branch=master)|
+| Submodules                                                      | Progress status                                                      | Build status                                                                                                                                             | Coverage status                                                                                                                                                                              |
+| --------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Components](https://github.com/HospitalRun/components)         | ![Status](https://img.shields.io/badge/Status-developing-brightgree) | [![GitHub CI](https://github.com/HospitalRun/components/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/components/actions)             | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/components/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/components?branch=master)                     |
+| [Frontend](https://github.com/HospitalRun/hospitalrun-frontend) | ![Status](https://img.shields.io/badge/Status-developing-brightgree) | [![GitHub CI](https://github.com/HospitalRun/frontend/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/frontend/actions)                 | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/hospitalrun-frontend/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/hospitalrun-frontend?branch=master) |
+| [Server](https://github.com/HospitalRun/hospitalrun-server)     | ![Status](https://img.shields.io/badge/Status-developing-brightgree) | [![GitHub CI](https://github.com/HospitalRun/server/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/server/actions)                     | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/hospitalrun-server/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/hospitalrun-server?branch=master)     |
+| [Core](https://github.com/HospitalRun/hospitalrun-core)         | ![Status](https://img.shields.io/badge/Status-developing-brightgree) | [![GitHub CI](https://github.com/HospitalRun/hospitalrun-core/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/hospitalrun-core/actions) | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/hospitalrun-core/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/hospitalrun-core?branch=master)         |
+| [CLI](https://github.com/HospitalRun/cli)                       | ![Status](https://img.shields.io/badge/Status-developing-brightgree) | [![GitHub CI](https://github.com/HospitalRun/cli/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/cli/actions)                           | [![Coverage Status](https://coveralls.io/repos/github/HospitalRun/cli/badge.svg?branch=master)](https://coveralls.io/github/HospitalRun/cli?branch=master)                                   |
 
 <em>Last Update: 7 Mar 2020</em>
 
 ## Table of Contents
 
+- [Contributing](#contributing)
+- [Provide feedback](#provide-feedback)
 - [Toolchain](#toolchain)
 - [Working on an Issue](#working-on-an-issue)
 - [Getting Started](#getting-started)
@@ -37,6 +45,24 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
   - [How to commit a specific package?](#how-to-commit-a-specific-package)
 - [Updating the monorepo structure](#updating-the-monorepo-structure)
 - [Application infrastructure](#application-infrastructure)
+
+## Contributing
+
+Interested in contributing to HopsitalRun? There are many ways that you can get involved:
+
+- Try the [application](https://staging.hospitalrun.io)
+- Review and update [project documentation](https://hospitalrun.readthedocs.io/)
+- Contributing to translations
+- Contributing to the [source code](https://github.com/HospitalRun/hospitalrun/blob/master/CONTRIBUTING.md)
+- Request [new features](https://github.com/HospitalRun/hospitalrun/issues/new?template=feature.md) and [report bugs](https://github.com/HospitalRun/hospitalrun/issues/new?template=bug.md)
+- [Sponsor the project](https://opencollective.com/hospitalrun/contribute/sponsors-336/checkout)
+
+## Provide feedback
+
+- Request a [new feature](<(https://github.com/HospitalRun/hospitalrun/issues/new?template=feature.md)>)
+- Report a [bug](https://github.com/HospitalRun/hospitalrun/issues/new?template=bug.md)
+- Post a message in [Slack](https://hospitalrun-slack.herokuapp.com)
+- Follow [@HosptialRun](https://twitter.com/HospitalRun)
 
 ## Toolchain
 
