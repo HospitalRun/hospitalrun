@@ -19,8 +19,8 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 | "I want to help" | [Read this paragraph](https://github.com/HospitalRun/hospitalrun#contributing) |
 | "I have a question" | [Join to our Slack Workspace](https://hospitalrun-slack.herokuapp.com) |
 | "I found a bug" | [Open an issue](https://github.com/HospitalRun/hospitalrun/issues/new/choose) |
-| "I found a bug" | [Open an issue](https://github.com/HospitalRun/hospitalrun/issues/new/choose) |
-"How can I deploy 1.0.0-beta?" | [Follow this step](http://eepurl.com/c7uKJ5) |  
+| "How do I push/commit changes to the repo?" | [Follow these steps](#commiting) |
+| "How can I deploy 1.0.0-beta?" | [Follow this guide](http://eepurl.com/c7uKJ5) |  
 
 <div align="center">
 
