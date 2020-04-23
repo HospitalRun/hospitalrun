@@ -21,14 +21,8 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 | "I found a bug" | [Open an issue](https://github.com/HospitalRun/hospitalrun/issues/new/choose) |
 | "How do I push/commit changes to the repo?" | [Follow these steps](#commiting) |
 | "How can I deploy 1.0.0-beta?" | [Follow this guide](http://eepurl.com/c7uKJ5) |  
-| "I’d like to contribute but don’t know where to start." |
- | As a first thing first you should read [this document from GitHub](https://opensource.guide/how-to-contribute/) |
-
-<div align="center">
-
-[![Contributors](https://img.shields.io/badge/Hint-Are%20you%20a%20new%20contributor%3F-Green?style=for-the-badge&logo=github)](#contributing)
-
-</div>
+| "I’d like to contribute but don’t know where to start." | As a first thing first you should read [this document from GitHub](https://opensource.guide/how-to-contribute/) |
+| "What if I am not confident enough even to approach a “Good first issue”?" | [We talked about it here](#what-if-i-am-not-confident-enough-even-to-approach-a-good-first-issue) | 
 
  ## Table of Contents
 
@@ -66,6 +60,10 @@ Interested in contributing to HospitalRun? There are many ways that you can get 
 - Contributing to the [source code](https://github.com/HospitalRun/hospitalrun/blob/master/.github/CONTRIBUTING.md)
 - Request [new features](https://github.com/HospitalRun/hospitalrun/issues/new?template=feature.md) and [report bugs](https://github.com/HospitalRun/hospitalrun/issues/new?template=bug.md)
 - [Sponsor the project](https://opencollective.com/hospitalrun/contribute/sponsors-336/checkout)
+
+### What if I am not confident enough even to approach a “Good first issue”?
+
+HospitalRun is a big and complex project, since our goal is to develop a full-fledged Hospital Information System. There are many areas where you can contribute and helps us build the best possible software: documentation, community management, helping users to get on board and so on. Check our website for more informations and feel free to open an issue to describe how you can be useful to the project!
 
 ## Toolchain
 
