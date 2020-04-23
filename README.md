@@ -21,6 +21,8 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 | "I found a bug" | [Open an issue](https://github.com/HospitalRun/hospitalrun/issues/new/choose) |
 | "How do I push/commit changes to the repo?" | [Follow these steps](#commiting) |
 | "How can I deploy 1.0.0-beta?" | [Follow this guide](http://eepurl.com/c7uKJ5) |  
+| "I’d like to contribute but don’t know where to start." |
+ | As a first thing first you should read [this document from GitHub](https://opensource.guide/how-to-contribute/) |
 
 <div align="center">
 
