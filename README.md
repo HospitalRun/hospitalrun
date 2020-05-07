@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/HospitalRun/design/master/logo/logo-on-transparent.png" alt="HospitalRun logo"/>
+<img src="https://raw.githubusercontent.com/HospitalRun/design/master/logo/horizontal/logo-on-transparent.png" alt="HospitalRun logo"/>
 
 ![Last commit](https://img.shields.io/github/last-commit/hospitalrun/hospitalrun) [![GitHub CI](https://github.com/HospitalRun/hospitalrun/workflows/GitHub%20CI/badge.svg)](https://github.com/HospitalRun/hospitalrun/actions) [![Documentation Status](https://readthedocs.org/projects/hospitalrun/badge/?version=latest)](https://docs.hospitalrun.io) [![Activity](https://img.shields.io/github/commit-activity/m/hospitalrun/hospitalrun)](https://github.com/hospitalrun/hospitalrun/pulse) ![Repo size](https://img.shields.io/github/repo-size/hospitalrun/hospitalrun) ![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg) [![Slack](https://hospitalrun-slack.herokuapp.com/badge.svg)](https://hospitalrun-slack.herokuapp.com)
 <hr />
