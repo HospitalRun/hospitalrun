@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   
-  yarn-1.19.1:
+  yarn1191:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -39,7 +39,7 @@ jobs:
         run: |
           yarn workspaces run build 
   
-  yarn-latest:
+  yarn:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
