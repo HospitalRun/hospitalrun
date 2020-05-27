@@ -32,6 +32,7 @@ jobs:
       - name: Install with yarn
         run: |
           curl -o- -L https://yarnpkg.com/install.sh | bash
+          yarn set version 1.19.1
           yarn install
       - name: Build
         run: |
