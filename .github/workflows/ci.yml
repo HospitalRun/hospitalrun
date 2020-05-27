@@ -3,48 +3,12 @@ name: GitHub CI
 on: [pull_request]
 
 jobs:
-  
-  yarn1191:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node-version: [12.x]
-        os: [ubuntu-18.04]
-    steps:
-      - uses: actions/checkout@master   
-      - name: Disable the keychain credential helper
-        run: git config --global credential.helper ""
-      - name: Enable the local store credential helper
-        run: git config --global --add credential.helper store
-      - name: Add credential
-        run: echo "https://x-access-token:${{ secrets.BOT_TOKEN }}@github.com" >> ~/.git-credentials
-      - name: Tell git to use https instead of ssh whenever it encounters it
-        run: 'git config --global url."https://github.com/".insteadof git@github.com:'
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}      
-      - name: Checkout submodules
-        shell: bash
-        run: |
-          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
-          git submodule sync --recursive
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1  
-      - name: Install with yarn
-        run: |
-          curl -o- -L https://yarnpkg.com/install.sh | bash
-          yarn set version 1.19.1
-          yarn install
-      - name: Build
-        run: |
-          yarn workspaces run build 
-  
   yarn:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: [12.x]
-        os: [ubuntu-18.04]
+        node-version: [12.x, 14.x]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
       - uses: actions/checkout@master   
       - name: Disable the keychain credential helper
