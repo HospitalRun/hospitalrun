@@ -11,7 +11,7 @@ HospitalRun is made up of several repositories. Below is a breakdown of each rep
 
 If you are interested in working in any of these repositories, [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) the individual repository and follow the CONTRIBUTING guide for setting up your local development environment.
 
-## Working on an Issue
+## 1. Working on an Issue
 
 Interested in working on the HospitalRun codebase? The Issues tab in each repository is the best spot to begin looking for work. Issues with the `help wanted` label indicate that the issue is open for a contributor to work on! Looking for an aggregation of all open issues in the HospitalRun project, check this [link](https://hospitalrun.github.io/ubersicht/?showOpen=true&showClosed=false&showCommented=true&showUncommented=true&showIssues=true&showPullRequests=true&last24Hours=false&repos=null&labels=null&milestones=null&usernames=null#hospitalrun) out!
 
@@ -21,7 +21,7 @@ In order to support as many contributors as possible, we will try to assign only
 
 If a contributor has been assigned an issue for more than 14 days and there has been no activity, a core maintainer will leave a comment asking about the status of the issue. If there is no response in 7 days, then the issue will be unassigned and marked as `help wanted`.
 
-## Committing Changes
+## 2. Committing Changes
 
 This repo uses [conventional commits](https://www.conventionalcommits.org) and [semantic-release](https://github.com/semantic-release/semantic-release). Once you have changes staged
 you can run `git cz` from the root directory in order to commit to the proper standards.
@@ -30,17 +30,20 @@ you can run `git cz` from the root directory in order to commit to the proper st
 2. Use the following command: `yarn commit`
 3. Updates remote refs using local refs. Es: `git push`
 
-## Submitting a pull request
+## 3. Submitting a pull request
 
-Submitting a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) is how a contributor submits changes to the source code of HospitalRun.
+Submitting a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) is how a contributor submits changes to the source code of HospitalRun. Please take a moment to see if your pull request is incomplete or complete:
 
-When submitting a pull request, an pull request author should make sure that all pull request checks (tests, linting, etc) are passing.
+| Pull Request is... | Description | Need to add tests? | Need to pass checks? |
+| --- | --- | --- | --- |
+| Incomplete | You have questions.<br>It is a partial implementation.<br>You plan to refactor later. etc. | No | No |
+| Complete | It is ready for production. | Yes | Yes |
+
+If incomplete, add 'WIP' to the beginning of the pull request title and mark the pull request as a [draft](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests).
 
 Pull requests descriptions should be filled out with as much detail as necessary to describe the changes. This should include describing the code changes, new features added, bugs fixed, and any new dependencies introduced.
 
 A core maintainer will review the pull requests changes and will provide feedback. If feedback is requested and the author of the pull request does not follow up on the feedback within 7 days, a core maintainer will then complete the requested changes on behalf of the author and merge the changes in.
-
-If a contributor has a pull request that they would like to have reviewed, but the pull request is not complete, they should add 'WIP' to the beginning of the pull request title and mark the pull request as a [draft](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests).
 
 ## Contributor License Agreement
 
