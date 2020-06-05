@@ -1,13 +1,13 @@
 # Contributing
 
-HospitalRun is made up of several repositories. Below is a breakdown of each repository: 
+HospitalRun is made up of several repositories. Below is a breakdown of each repository:
 
-| Repository                                                                                          | Description                                             | Technologies                                                                                                                                                                                  |   |
-|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
-| [frontend](https://github.com/HospitalRun/hospitalrun-frontend/blob/master/.github/CONTRIBUTING.md) | A repository that holds the frontend React appllication | [TypeScript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [Redux](https://react-redux.js.org/), [PouchDB](https://pouchdb.com/), [Jest](https://jestjs.io/),              |   |
-| [components](https://github.com/HospitalRun/components/blob/master/.github/CONTRIBUTING.md)         | A repository of building block components.              | [TypeScript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [TSDX](https://github.com/jaredpalmer/tsdx), [Jest](https://jestjs.io/), [Storybook](https://storybook.js.org/) |   |
-| [server](https://github.com/HospitalRun/hospitalrun-server/blob/master/.github/CONTRIBUTING.md)     | A repository to host the service                        | [TypeScript](https://www.typescriptlang.org/), [NodeJs](https://nodejs.org/en/), [Fastify](https://www.fastify.io/), [CouchDB](https://couchdb.apache.org/)                                   |   |
-| [core](https://github.com/HospitalRun/hospitalrun-core/blob/master/.github/CONTRIBUTING.md)         | A repository to host core models                        | [TypeScript](https://www.typescriptlang.org/), [Typebox](https://github.com/sinclairzx81/typebox)                                                                                             |   |typebox)                                                                                             |   |
+| Repository                                                                                          | Description                                             | Technologies                                                                                                                                                                                  |     |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| [frontend](https://github.com/HospitalRun/hospitalrun-frontend/blob/master/.github/CONTRIBUTING.md) | A repository that holds the frontend React appllication | [TypeScript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [Redux](https://react-redux.js.org/), [PouchDB](https://pouchdb.com/), [Jest](https://jestjs.io/),              |     |
+| [components](https://github.com/HospitalRun/components/blob/master/.github/CONTRIBUTING.md)         | A repository of building block components.              | [TypeScript](https://www.typescriptlang.org/), [React](https://reactjs.org/), [TSDX](https://github.com/jaredpalmer/tsdx), [Jest](https://jestjs.io/), [Storybook](https://storybook.js.org/) |     |
+| [server](https://github.com/HospitalRun/hospitalrun-server/blob/master/.github/CONTRIBUTING.md)     | A repository to host the service                        | [TypeScript](https://www.typescriptlang.org/), [NodeJs](https://nodejs.org/en/), [Fastify](https://www.fastify.io/), [CouchDB](https://couchdb.apache.org/)                                   |     |
+| [core](https://github.com/HospitalRun/hospitalrun-core/blob/master/.github/CONTRIBUTING.md)         | A repository to host core models                        | [TypeScript](https://www.typescriptlang.org/), [Typebox](https://github.com/sinclairzx81/typebox)                                                                                             |     | typebox) |  |
 
 If you are interested in working in any of these repositories, [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) the individual repository and follow the CONTRIBUTING guide for setting up your local development environment.
 
@@ -23,7 +23,8 @@ If a contributor has been assigned an issue for more than 14 days and there has 
 
 ## 2. Committing Changes
 
-All repositories use [conventional commits](https://github.com/Landish/cz-gitmoji) and [semantic-release](https://github.com/momocow/semantic-release-gitmoji). Once a contributor has changes staged they can run `git cz` from the root directory in order to commit to the proper standards.
+This repo uses [conventional commits](https://www.conventionalcommits.org) and [semantic-release](https://github.com/semantic-release/semantic-release). Once you have changes staged
+you can run `git cz` from the root directory in order to commit to the proper standards.
 
 1. Staging all pending changes. Es: `git add .`
 2. Use the following command: `yarn commit`
@@ -40,7 +41,7 @@ Submitting a [pull request](https://help.github.com/en/github/collaborating-with
 
 If incomplete, add 'WIP' to the beginning of the pull request title and mark the pull request as a [draft](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests).
 
-Pull requests descriptions should be filled out with as much detail as necessary to describe the changes. This should include describing the code changes, new features added, bugs fixed, and any new dependencies introduced.  
+Pull requests descriptions should be filled out with as much detail as necessary to describe the changes. This should include describing the code changes, new features added, bugs fixed, and any new dependencies introduced.
 
 A core maintainer will review the pull requests changes and will provide feedback. If feedback is requested and the author of the pull request does not follow up on the feedback within 7 days, a core maintainer will then complete the requested changes on behalf of the author and merge the changes in.
 
