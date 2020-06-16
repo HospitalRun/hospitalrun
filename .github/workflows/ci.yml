@@ -31,8 +31,7 @@ jobs:
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1  
       - name: Install with yarn
         run: |
-          curl -o- -L https://yarnpkg.com/install.sh | bash
-          yarn policies set-version 1.19.1
+          curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.1
           yarn install
       - name: Build
         run: |
