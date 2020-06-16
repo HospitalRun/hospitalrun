@@ -3,16 +3,16 @@ name: GitHub CI
 on: [pull_request]
 
 jobs:
-  yarn:
+  linux:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node-version: [12.x, 14.x]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest]
     steps:
-      - uses: actions/checkout@master   
+      - uses: actions/checkout@master
       - name: Disable the keychain credential helper
-        run: git config --global --unset credential.helper
+        run: git config --global credential.helper ""
       - name: Enable the local store credential helper
         run: git config --global --add credential.helper store
       - name: Add credential
@@ -22,17 +22,85 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}        
+          node-version: ${{ matrix.node-version }}
       - name: Checkout submodules
         shell: bash
         run: |
           auth_header="$(git config --local --get http.https://github.com/.extraheader)"
           git submodule sync --recursive
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1  
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
       - name: Install with yarn
         run: |
           curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.1
           yarn install
       - name: Build
         run: |
-          yarn workspaces run build 
+          yarn workspaces run build
+
+  macos:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x]
+        os: [macOS-latest]
+    steps:
+      - uses: actions/checkout@master
+      - name: Disable the keychain credential helper
+        run: git config --global credential.helper ""
+      - name: Enable the local store credential helper
+        run: git config --global --add credential.helper store
+      - name: Add credential
+        run: echo "https://x-access-token:${{ secrets.BOT_TOKEN }}@github.com" >> ~/.git-credentials
+      - name: Tell git to use https instead of ssh whenever it encounters it
+        run: 'git config --global url."https://github.com/".insteadof git@github.com:'
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Checkout submodules
+        shell: bash
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+      - name: Install with yarn
+        run: |
+          curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.1
+          yarn install
+      - name: Build
+        run: |
+          yarn workspaces run build
+
+  windows:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x]
+        os: [windows-latest]
+    steps:
+      - uses: actions/checkout@master
+      - name: Disable the keychain credential helper
+        run: git config credential.modalprompt false --global
+      - name: Enable the local store credential helper
+        run: git config --global --add credential.helper store
+      - name: Add credential
+        run: echo "https://x-access-token:${{ secrets.BOT_TOKEN }}@github.com" >> ~/.git-credentials
+      - name: Tell git to use https instead of ssh whenever it encounters it
+        run: 'git config --global url."https://github.com/".insteadof git@github.com:'
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Checkout submodules
+        shell: bash
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+      - name: Install with yarn
+        run: |
+          curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.19.1
+          yarn install
+      - name: Build
+        run: |
+          yarn workspaces run build
