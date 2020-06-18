@@ -10,7 +10,7 @@
 All **HospitalRun** code lives in a single repository, an architecture generally called a monorepo. This repository holds all of HospitalRun's open source projects that lived in their own separate Github repos: [frontend](https://github.com/HospitalRun/hospitalrun-frontend), [server](https://github.com/HospitalRun/hospitalrun-server) and [components](https://github.com/HospitalRun/components).
 Built with React, Node, PouchDB/CouchDB and using offline first design, we're working to deliver an HIS system that makes usability the #1 requirement, is built specifically for developing world requirements, and seeks to give back time to patient care.
 
-**Version 1.0.0-beta is no longer supported. Version 2 is currently under development.**
+**<h3>‼️ Version 1.0.0-beta is no longer supported. Version 2 is currently under development ‼️</h3>**
 
 # FAQs
 
