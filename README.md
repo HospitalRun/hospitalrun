@@ -16,29 +16,31 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 
 | Question                                                                   | Answer                                                                                                          |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| "I want to help"                                                           | [Read this paragraph](https://github.com/HospitalRun/hospitalrun#contributing)                                  |
-| "I have a question"                                                        | [Join to our Slack Workspace](https://hospitalrun-slack.herokuapp.com)                                          |
+| "I want to help"                                                           | [Find out how](#contributing)                                  |
+| "I have a question"                                                        | [Join our Slack Workspace](https://hospitalrun-slack.herokuapp.com)                                          |
 | "I found a bug"                                                            | [Open an issue](https://github.com/HospitalRun/hospitalrun/issues/new/choose)                                   |
-| "How do I push/commit changes to the repo?"                                | [Follow these steps](#commiting)                                                                                |
 | "How can I deploy 1.0.0-beta?"                                             | [Follow this guide](http://eepurl.com/c7uKJ5)                                                                   |
-| "I’d like to contribute but don’t know where to start."                    | As a first thing first you should read [this document from GitHub](https://opensource.guide/how-to-contribute/) |
-| "What if I am not confident enough even to approach a “Good first issue”?" | [We talked about it here](#what-if-i-am-not-confident-enough-even-to-approach-a-good-first-issue)               |
 
-## Table of Contents
+# Table of Contents
 
-- [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [Provide feedback](#provide-feedback)
-- [Toolchain](#toolchain)
-- [Working on an Issue](#working-on-an-issue)
-- [Getting Started](#getting-started)
-- [Pull all submodules](#pull-all-submodules)
-- [Commiting](#commiting)
-  - [How to commit a specific package?](#how-to-commit-a-specific-package)
-- [Updating the monorepo structure](#updating-the-monorepo-structure)
-- [Application infrastructure](#application-infrastructure)
+- [Project Structure](#project-structure)
+- [Application Infrastructure](#application-infrastructure)
+- [Monorepo-specific Contributing Guide](#monorepo-specific-contributing-guide)
+- [Behind HospitalRun](#behind-hospitalRun)
+- [License](#license)
 
-## Project Structure
+# Contributing
+
+Interested in contributing to HospitalRun? There are many ways that you can get involved:
+- Try the [application](https://staging.hospitalrun.io)
+- Request [new features](https://github.com/HospitalRun/hospitalrun/issues/new?template=feature.md) and [report bugs](https://github.com/HospitalRun/hospitalrun/issues/new?template=bug.md)
+- Write [project documentation](https://hospitalrun.readthedocs.io/)
+- Contribute to the [source code](https://github.com/HospitalRun/hospitalrun/blob/master/.github/CONTRIBUTING.md)
+- [Sponsor the project](https://opencollective.com/hospitalrun/contribute/sponsors-336/checkout)
+- Translate text in the [application](https://staging.hospitalrun.io)
+
+# Project Structure
 
 | Submodules                                                      | Progress status                                                      | Build status                                                                                                                                             | Coverage status                                                                                                                                                                              | Code quality                                                                                                                                                                                                                 |
 | --------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -50,20 +52,15 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 
 <em>Last Update: 7 Mar 2020</em>
 
-## Contributing
+# Application Infrastructure
 
-Interested in contributing to HospitalRun? There are many ways that you can get involved:
+A visual representation of the functionality of all HospitalRun modules and their interactions.
 
-- Try the [application](https://staging.hospitalrun.io)
-- Review and update [project documentation](https://hospitalrun.readthedocs.io/)
-- Contributing to __translations__
-- Contributing to the __source code__: please [first read this guide](https://github.com/HospitalRun/hospitalrun/blob/master/.github/CONTRIBUTING.md) and make sure that you have at least some confidence with the technologies that are used in the area of your interest.
-- Request [new features](https://github.com/HospitalRun/hospitalrun/issues/new?template=feature.md) and [report bugs](https://github.com/HospitalRun/hospitalrun/issues/new?template=bug.md)
-- [Sponsor the project](https://opencollective.com/hospitalrun/contribute/sponsors-336/checkout)
+[<img width="1658" alt="miro" src="https://user-images.githubusercontent.com/6388707/78055877-7b50ed80-7384-11ea-9e65-602a0f8b9ec9.png">](https://miro.com/app/board/o9J_kv4RtwE=/)
 
-### What if I am not confident enough even to approach a “Good first issue”?
+<hr />
 
-HospitalRun is a big and complex project, since our goal is to develop a full-fledged Hospital Information System. There are many areas where you can contribute and helps us build the best possible software: documentation, community management, helping users to get on board and so on. Check our website for more informations and feel free to open an issue to describe how you can be useful to the project!
+# Monorepo-specific Contributing Guide
 
 ## Toolchain
 
@@ -84,10 +81,6 @@ yarn workspaces run build
 npx git-cz
 ```
 
-## Working on an Issue
-
-In order to optimize the workflow and to prevent multiple contributors working on the same issue without interactions, a contributor must ask to be assigned to an issue by one of the core team members: it's enough to ask it inside the specific issue.
-
 ## Pull all submodules
 
 Use these commands to update all submodules and use the last available commit.
@@ -99,16 +92,7 @@ yarn upgrade // Update all dependencies automatically
 yarn update // This is similar to npm-check interactive update mode. It provides an easy way to update outdated packages.
 ```
 
-## Commiting
-
-This repo uses [conventional commits](https://www.conventionalcommits.org) and [semantic-release](https://github.com/semantic-release/semantic-release). Once you have changes staged
-you can run `git cz` from the root directory in order to commit to the proper standards.
-
-1. Staging all pending changes. Es: `git add .`
-2. Use the following command: `yarn commit`
-3. Updates remote refs using local refs. Es: `git push`
-
-### How to commit a specific package?
+## How to commit a specific package?
 
 ```
 yarn commit-frontend
@@ -161,14 +145,6 @@ yarn upgrade
 npx git-cz
 ```
 
-# Application infrastructure
-
-A visual representation of the functionality of all HospitalRun modules and their interactions.
-
-[<img width="1658" alt="miro" src="https://user-images.githubusercontent.com/6388707/78055877-7b50ed80-7384-11ea-9e65-602a0f8b9ec9.png">](https://miro.com/app/board/o9J_kv4RtwE=/)
-
-<hr />
-
 # Behind HospitalRun
 
 ## Hosted by
@@ -220,3 +196,4 @@ A visual representation of the functionality of all HospitalRun modules and thei
 # License
 
 Released under the [MIT license](LICENSE).
+
