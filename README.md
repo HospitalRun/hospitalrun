@@ -56,8 +56,8 @@ Interested in contributing to HospitalRun? There are many ways that you can get 
 
 - Try the [application](https://staging.hospitalrun.io)
 - Review and update [project documentation](https://hospitalrun.readthedocs.io/)
-- Contributing to translations
-- Contributing to the [source code](https://github.com/HospitalRun/hospitalrun/blob/master/.github/CONTRIBUTING.md)
+- Contributing to __translations__
+- Contributing to the __source code__: please [first read this guide](https://github.com/HospitalRun/hospitalrun/blob/master/.github/CONTRIBUTING.md) and make sure that you have at least some confidence with the technologies that are used in the area of your interest.
 - Request [new features](https://github.com/HospitalRun/hospitalrun/issues/new?template=feature.md) and [report bugs](https://github.com/HospitalRun/hospitalrun/issues/new?template=bug.md)
 - [Sponsor the project](https://opencollective.com/hospitalrun/contribute/sponsors-336/checkout)
 
