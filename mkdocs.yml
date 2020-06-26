@@ -8,9 +8,10 @@ repo_url: https://github.com/hospitalrun/hospitalrun/
 nav:
   - Home: https://docs.hospitalrun.io
   - Users Guide: https://hospitalrun.io
-  - Devs Guide:
+  - Contributor Documentation:
       - Frontend: https://hospitalrun-frontend.readthedocs.io
       - Server: https://hospitalrun-server.readthedocs.io
+      - Architectural Decision Records: adr.md
   - About:
       - Project: https://hospitalrun.io
       - Contributing: https://github.com/HospitalRun/hospitalrun/blob/master/.github/CONTRIBUTING.md
