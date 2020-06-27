@@ -26,7 +26,6 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 - [Contributing](#contributing)
 - [Project Structure](#project-structure)
 - [Application Infrastructure](#application-infrastructure)
-- [Monorepo-specific Contributing Guide](#monorepo-specific-contributing-guide)
 - [Behind HospitalRun](#behind-hospitalRun)
 - [License](#license)
 
@@ -58,93 +57,6 @@ A visual representation of the functionality of all HospitalRun modules and thei
 
 [<img width="1658" alt="miro" src="https://user-images.githubusercontent.com/6388707/78055877-7b50ed80-7384-11ea-9e65-602a0f8b9ec9.png">](https://miro.com/app/board/o9J_kv4RtwE=/)
 
-<hr />
-
-# Monorepo-specific Contributing Guide
-
-## Toolchain
-
-We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node, and [**yarn**](https://yarnpkg.com/) for a fast, reliable, and secure dependency management. We suggest to install **yarn** with `npm i -g yarn`.
-
-## Getting Started
-
-Use these commands to start using the monorepo. The following commands require that your GitHub account has [SSH access](https://help.github.com/en/articles/connecting-to-github-with-ssh) enabled.
-
-```
-git clone git@github.com:HospitalRun/hospitalrun.git
-cd hospitalrun
-git submodule update --init --recursive
-yarn
-yarn workspaces run build
-
-# Do some coding then commit with
-npx git-cz
-```
-
-## Pull all submodules
-
-Use these commands to update all submodules and use the last available commit.
-
-```
-git submodule update --recursive --remote
-
-yarn upgrade // Update all dependencies automatically
-yarn update // This is similar to npm-check interactive update mode. It provides an easy way to update outdated packages.
-```
-
-## How to commit a specific package?
-
-```
-yarn commit-frontend
-yarn commit-server
-yarn commit-components
-yarn commit-cli
-yarn commit-core
-yarn commit-docs
-```
-
-You must follow the following rules:
-
-1. Commit description must always start with a capital letter.
-2. Always use a scope. Here are some examples:
-
-**Generic**
-
-```
-setting
-ci
-deps
-readme
-devops
-system
-core
-testing
-cli
-release
-lifecycle
-```
-
-**Monorepo specific**
-
-```
-monorepo
-package
-release
-lifecycle
-workspace
-```
-
-## Updating the monorepo structure
-
-Use these commands to add a new package after adding a submodule.
-
-```
-git submodule update --remote
-git add ./packages
-yarn upgrade
-npx git-cz
-```
-
 # Behind HospitalRun
 
 ## Hosted by
@@ -158,6 +70,10 @@ npx git-cz
 ## Backers
 
 [![Backers](https://opencollective.com/hospitalrun/backers.svg?width=890)](https://opencollective.com/hospitalrun/contribute/backers-335/checkout)
+
+## Big Thanks
+
+Cross-browser Testing Platform and Open Source <3 Provided by [Sauce Labs](https://saucelabs.com)
 
 ## Lead Maintainer
 
