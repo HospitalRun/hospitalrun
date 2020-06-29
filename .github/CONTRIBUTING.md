@@ -53,8 +53,6 @@ Note: All repos use [conventional commits](https://www.conventionalcommits.org) 
 
 ## 5. Submit a Pull Request
 
-‼️ **Temporarily, please wait to open a Pull Request until it's ready for review. We need to optimize build time.**
-
 You can [create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) to submit changes to the source code. Please take a moment to see if your pull request is incomplete or complete:
 
 | Pull Request is... | Description | Need to add tests? | Need to pass checks? |
