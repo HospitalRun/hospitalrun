@@ -23,11 +23,16 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 
 # Table of Contents
 
+- [Staging Area](#staging-area)
 - [Contributing](#contributing)
 - [Project Structure](#project-structure)
 - [Application Infrastructure](#application-infrastructure)
 - [Behind HospitalRun](#behind-hospitalRun)
 - [License](#license)
+
+# Staging Area
+
+You can follow developments by visiting the dedicated [staging environment](https://staging.hospitalrun.io). Use `username` / `password` as credentials to access.
 
 # Contributing
 
