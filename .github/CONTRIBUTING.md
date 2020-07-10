@@ -11,11 +11,20 @@ HospitalRun is made up of several repositories:
 
 Note: We use [TypeScript](https://www.typescriptlang.org/).
 
-# Contributing Guide for All Repos
+## Dev Tools
+- Gitpod provides a fully featured online development environment that is integrated with Github to clone a repo, install the dependencies, and start the webserver.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/HospitalRun/hospitalrun-frontend)
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+# HospitalRun General Contributing Guide
 
 Repo-specific contributing guides are listed in the above table for easy access.
 
-Also, you are encouraged to reach out to the community of contributors for questions and feedback. See you in [Slack](https://hospitalrun-slack.herokuapp.com).
+Also, you are encouraged to reach out to the community of contributors for questions and feedback. See you in Slack!
+
+[![Slack](https://img.shields.io/badge/Slack-Join%20our%20devs%20group-blueviolet?style=for-the-badge&logo=slack)](https://hospitalrun-slack.herokuapp.com)
 
 ## 1. Browse Issues
 
@@ -69,4 +78,89 @@ For more information about CLAs, please check out Alex Russell’s excellent pos
 ## Code of Conduct
 
 Before contributing please read the [code of conduct](https://github.com/HospitalRun/hospitalrun/blob/master/.github/CODE_OF_CONDUCT.md)
+
+# Monorepo Contributing Guide
+
+## Toolchain
+
+We recommend the use of [**nvm**](https://github.com/nvm-sh/nvm#install--update-script) for the management of different versions of Node, and [**yarn**](https://yarnpkg.com/) for a fast, reliable, and secure dependency management. We suggest to install **yarn** with `npm i -g yarn`.
+
+## Getting Started
+
+Use these commands to start using the monorepo. The following commands require that your GitHub account has [SSH access](https://help.github.com/en/articles/connecting-to-github-with-ssh) enabled.
+
+```
+git clone git@github.com:HospitalRun/hospitalrun.git
+cd hospitalrun
+git submodule update --init --recursive
+yarn
+yarn workspaces run build
+
+# Do some coding then commit with
+npx git-cz
+```
+
+## Pull all submodules
+
+Use these commands to update all submodules and use the last available commit.
+
+```
+git submodule update --recursive --remote
+
+yarn upgrade // Update all dependencies automatically
+yarn update // This is similar to npm-check interactive update mode. It provides an easy way to update outdated packages.
+```
+
+## How to commit a specific package?
+
+```
+yarn commit-frontend
+yarn commit-server
+yarn commit-components
+yarn commit-cli
+yarn commit-core
+yarn commit-docs
+```
+
+You must follow the following rules:
+
+1. Commit description must always start with a capital letter.
+2. Always use a scope. Here are some examples:
+
+**Generic**
+
+```
+setting
+ci
+deps
+readme
+devops
+system
+core
+testing
+cli
+release
+lifecycle
+```
+
+**Monorepo specific**
+
+```
+monorepo
+package
+release
+lifecycle
+workspace
+```
+
+## Updating the monorepo structure
+
+Use these commands to add a new package after adding a submodule.
+
+```
+git submodule update --remote
+git add ./packages
+yarn upgrade
+npx git-cz
+```
 
