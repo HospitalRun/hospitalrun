@@ -46,3 +46,8 @@ the function and use spies.
 
 At the end of this refactor, no redux related code should exist in the application. All code should
 be migrated to a combination of react query hooks and context api for application state.
+
+Although data fetches can be done through regular function calls to the PouchDB library, react-query
+is able to help provide a consistent interface for returning errors and help with loading states during
+async data fetching. React Query also will serve as a common interface for all async data fetches
+regardless of the target.
