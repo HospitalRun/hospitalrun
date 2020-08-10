@@ -2,7 +2,7 @@
 
 ## What are architecture decision records?
 
-An architecture decision record (ADR) is a document that documents an architecture decision (AD) a made because of an architecturally-significant non-functional or functional requirement. These decisions are ones that have a large influence on architecture, are fundamental to the way the software is built, or would be difficult to reverse.  
+An architecture decision record (ADR) is a document that documents an architecture decision (AD) a made because of an architecturally-significant non-functional or functional requirement. These decisions are ones that have a large influence on architecture, are fundamental to the way the software is built, or would be difficult to reverse.
 
 All architecture decision records make up this architecture decision log.
 
@@ -23,6 +23,6 @@ All architecture decision records make up this architecture decision log.
 
 ## Architecture Decision Log
 
-|           Decision             |          Status           |            Author            |
-|--------------------------------|---------------------------|------------------------------|
-|                                |                           |                              |
+|           Decision                                                    |          Status                                                  |            Author                                  |
+|-----------------------------------------------------------------------|------------------------------------------------------------------|----------------------------------------------------|
+| [Migrate Redux to React Query & Context API](./redux_to_react_query)     | ![Status](https://img.shields.io/badge/status-proposed-yellow)   | [@jackcmeyer](https://github.com/jackcmeyer)    |
