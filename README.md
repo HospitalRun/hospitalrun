@@ -47,7 +47,7 @@ Interested in contributing to HospitalRun? There are many ways that you can get 
 
 # Community
 
-Join HospitalRun's community for discussion and ask questions : [HospitalRun's Slack Workspace](https://hospitalrun-slack.herokuapp.com)
+Join HospitalRun's community for discussion and ask questions: [HospitalRun's Slack Workspace](https://hospitalrun-slack.herokuapp.com)
 
 Channels :
 - **#general** - For general purpose 
