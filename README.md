@@ -50,9 +50,9 @@ Interested in contributing to HospitalRun? There are many ways that you can get 
 Join HospitalRun's community for discussion and ask questions : [HospitalRun's Slack Workspace](https://hospitalrun-slack.herokuapp.com)
 
 Channels :
-- **#general** - For general purpose (news, events...)
+- **#general** - For general purpose 
 - **#contributors** - For people who contribute to HospitalRun by developing features
-- **##troubleshooting** - For software related issues
+- **#troubleshooting** - For software related issues
 
 # Project Structure
 
