@@ -17,7 +17,7 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 | Question                                                                   | Answer                                                                                                          |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | "I want to help"                                                           | [Find out how](#contributing)                                  |
-| "I have a question"                                                        | [Join our Slack Workspace](https://hospitalrun-slack.herokuapp.com)                                          |
+| "I have a question"                                                        | [Join our Slack Workspace](#community)                                          |
 | "I found a bug"                                                            | [Open an issue](https://github.com/HospitalRun/hospitalrun/issues/new/choose)                                   |
 | "How can I deploy 1.0.0-beta?"                                             | [Follow this guide](http://eepurl.com/c7uKJ5)                                                                   |
 
@@ -25,6 +25,7 @@ Built with React, Node, PouchDB/CouchDB and using offline first design, we're wo
 
 - [Staging Area](#staging-area)
 - [Contributing](#contributing)
+- [Community](#community)
 - [Project Structure](#project-structure)
 - [Application Infrastructure](#application-infrastructure)
 - [Behind HospitalRun](#behind-hospitalRun)
@@ -43,6 +44,15 @@ Interested in contributing to HospitalRun? There are many ways that you can get 
 - Contribute to the [source code](https://github.com/HospitalRun/hospitalrun/blob/master/.github/CONTRIBUTING.md)
 - [Sponsor the project](https://opencollective.com/hospitalrun/contribute/sponsors-336/checkout)
 - Translate text in the [application](https://staging.hospitalrun.io)
+
+# Community
+
+Join HospitalRun's community for discussion and ask questions : [HospitalRun's Slack Workspace](https://hospitalrun-slack.herokuapp.com)
+
+Channels :
+- **#general** - For general purpose (news, events...)
+- **#contributors** - For people who contribute to HospitalRun by developing features
+- **##troubleshooting** - For software related issues
 
 # Project Structure
 
