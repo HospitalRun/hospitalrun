@@ -18,6 +18,8 @@ To get started contributing: fork the repositories you're interested in contribu
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/HospitalRun/hospitalrun-frontend)
 
+- [GitHub Codespace](https://github.com/codespaces)
+
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 # HospitalRun General Contributing Guide
