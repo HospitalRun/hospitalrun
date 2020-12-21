@@ -14,10 +14,6 @@ Note: We use [TypeScript](https://www.typescriptlang.org/).
 To get started contributing: fork the repositories you're interested in contributing to and follow each project's contributing guide to get the development environment setup. Each project can be contributed to independently of the other projects and there is no need to setup all the projects unless you want to contribute to all of them.
 
 ## Dev Tools
-- Gitpod provides a fully featured online development environment that is integrated with Github to clone a repo, install the dependencies, and start the webserver.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/HospitalRun/hospitalrun-frontend)
-
 - [GitHub Codespace](https://github.com/codespaces)
 
 - [Visual Studio Code](https://code.visualstudio.com/)
