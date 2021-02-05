@@ -76,7 +76,7 @@ A visual representation of the functionality of all HospitalRun modules and thei
 
 ## Hosted by
 
-[<img src="https://github.com/openjs-foundation/cross-project-council/blob/master/logos/openjsf-color.png?raw=true" width="120px;"/>](https://openjsf.org/projects/#atlarge)
+[<img src="https://openjsf.org/wp-content/uploads/sites/84/2019/03/openjsf-color-textw.svg" width="120px;"/>](https://openjsf.org/projects/#atlarge)
 
 ## Sponsors
 
